@@ -16,7 +16,7 @@
     "cw-chuanban-plugin": {
         "name": "舟山船班信息展示",
         "description": "这是一个用于展示舟山大岙码头船班信息的插件。",
-        "version": "1.1.0",
+        "version": "1.1.1",
         "plugin_ver": 1,
         "author": "LaoShui",
     
