@@ -12,5 +12,19 @@
         "update_date": "2024/12/19",
     
         "tag": "示例"
+    },
+    "cw-chuanban-plugin": {
+        "name": "舟山船班信息展示",
+        "description": "这是一个用于展示舟山大岙码头船班信息的插件。",
+        "version": "1.1.0",
+        "plugin_ver": 1,
+        "author": "LaoShui",
+    
+        "url": "https://github.com/laoshuikaixue/cw-ship-plugin",
+        "branch": "main",
+    
+        "update_date": "2024/12/21",
+    
+        "tag": "信息展示"
     }
 }
