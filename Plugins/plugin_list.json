@@ -16,15 +16,29 @@
     "cw-ship-plugin": {
         "name": "舟山船班信息展示",
         "description": "这是一个用于展示舟山大岙码头船班信息的插件。",
-        "version": "1.1.1",
+        "version": "1.1.2",
         "plugin_ver": 1,
         "author": "LaoShui",
     
         "url": "https://github.com/laoshuikaixue/cw-ship-plugin",
         "branch": "main",
     
-        "update_date": "2024/12/21",
+        "update_date": "2024/12/22",
     
         "tag": "信息展示"
+    },
+    "cw-yiyan-plugin": {
+        "name": "每日一言",
+        "description": "每天分享一句话，激励大家学习。",
+        "version": "1.0.0",
+        "plugin_ver": 1,
+        "author": "LaoShui",
+    
+        "url": "https://github.com/laoshuikaixue/cw-yiyan-plugin",
+        "branch": "main",
+    
+        "update_date": "2024/12/22",
+    
+        "tag": "学习"
     }
 }
