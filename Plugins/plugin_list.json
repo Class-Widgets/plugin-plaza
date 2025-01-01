@@ -44,7 +44,7 @@
     "Class Widgets Csv Import":{
         "name": "Class Widgets Csv Import",
         "description": "让我们用.csv表格编辑 Class Widgets 课表！将.csv文件转换为 Class Widgets Json 课表",
-        "version": "5.0",
+        "version": "5.1",
         "plugin_ver": 1,
         "author": "Detrital",
     
