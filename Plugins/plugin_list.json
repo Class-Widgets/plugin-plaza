@@ -5,54 +5,56 @@
         "version": "1.1.0",
         "plugin_ver": 1,
         "author": "Rin",
-    
         "url": "https://github.com/RinLit-233-shiroko/cw-example-plugin",
         "branch": "main",
-    
-        "update_date": "2024/12/19",
-    
+        "update_date": "2024/12/6",
         "tag": "示例"
     },
     "cw-ship-plugin": {
         "name": "舟山船班信息展示",
         "description": "这是一个用于展示舟山大岙码头船班信息的插件。",
-        "version": "1.2.0",
+        "version": "1.3.1",
         "plugin_ver": 1,
         "author": "LaoShui",
-    
         "url": "https://github.com/laoshuikaixue/cw-ship-plugin",
         "branch": "main",
-    
-        "update_date": "2025/01/01",
-    
+        "update_date": "2025/01/07",
         "tag": "信息 | 提醒 | 小组件"
     },
     "cw-yiyan-plugin": {
         "name": "每日一言",
         "description": "每天分享一句话，激励大家学习。",
-        "version": "1.2.1",
+        "version": "1.3.1",
         "plugin_ver": 1,
         "author": "LaoShui",
-    
         "url": "https://github.com/laoshuikaixue/cw-yiyan-plugin",
         "branch": "main",
-    
-        "update_date": "2025/01/01",
-    
+        "update_date": "2025/01/07",
         "tag": "学习 | 实用 | 小组件"
     },
-    "Class Widgets Csv Import":{
+    "Class Widgets Csv Import": {
         "name": "Class Widgets Csv Import",
         "description": "让我们用.csv表格编辑 Class Widgets 课表！将.csv文件转换为 Class Widgets Json 课表",
-        "version": "5.1",
+        "version": "1.0.0",
         "plugin_ver": 1,
         "author": "Detrital",
-    
         "url": "https://github.com/Detritalw/Class-Widget-CSV-import",
         "branch": "main",
-    
         "update_date": "2024/12/28",
-        
         "tag": "实用 | 工具"
+    },
+    "cw-student-on-duty-plugin": {
+        "name": "Class Widgets 值日生插件",
+        "description": "Class-Widgets 值日生插件，用于展示当天值日生信息 目前已实现： 14组值日生，每组四个人循环（多组或者每组人数不一样没试过，可以自己试一试，不能用提issue），可以作为RinLit写官方功能之前的一个替代品",
+        "version": "0.0.1",
+        "plugin_ver": "1.1.7",
+        "author": "月下的桃子",
+    
+        "url": "https://github.com/Welsonpeaches/cw-student-on-duty-plugin",
+        "branch": "main",
+    
+        "update_date": "2025/1/11",
+    
+        "tag": "实用 | 工具 | 班级环境 | 小组件"
     }
 }
