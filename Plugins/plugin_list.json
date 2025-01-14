@@ -53,5 +53,16 @@
         "branch": "main",
         "update_date": "2025/1/4",
         "tag": "实用 | 工具 | 班级环境 | 小组件"
+    },
+    "cw-quiet-time-reminder-plugin": {
+        "name": "静班提醒",
+        "description": "一个在静班时间发送通知以进行提醒的插件。",
+        "version": "1.0.0",
+        "plugin_ver": 1,
+        "author": "LaoShui",
+        "url": "https://github.com/laoshuikaixue/cw-quiet-time-reminder-plugin",
+        "branch": "main",
+        "update_date": "2025/01/14",
+        "tag": "信息 | 提醒 | 小组件"
     }
 }
