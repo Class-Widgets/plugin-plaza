@@ -108,5 +108,18 @@
         "branch": "main",
         "update_date": "2025/01/22",
         "tag": "实用 | 工具 | 小组件"
+    },
+    {
+        "name": "ClassIsland",
+        "description": "ClassIsland 是一款适用于班级多媒体屏幕的课表信息显示工具，可以在 Windows 屏幕上显示各种信息。本应用的名字灵感源于 iOS 灵动岛（Dynamic Island）功能。",
+        "version": "1.0.0",
+        "plugin_ver": 1,
+        "author": "classisland",
+        "settings": false,
+        "url": "https://github.com/ClassIsland/classwidgets-plugin-classisland",
+        "branch": "main",
+        "update_date": "2025/01/23",
+        "tag": "工具",
     }
+
 }
