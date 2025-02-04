@@ -133,18 +133,6 @@
         "update_date": "2024/1/31",
         "tag": "信息 | 小组件"
     },
-    "cw-range-name-plugin": {
-        "name": "随机点名",
-        "description": "为Class Widgets 带上随机点名功能",
-        "version": "1.0.0",
-        "plugin_ver": 1,
-        "author": "neko_lfj | RinLit",
-        "settings": true,
-        "url": "https://github.com/nekolfj/cw-range-name-plugin",
-        "branch": "main",
-        "update_date": "2024/2/3",
-        "tag": "实用 | 工具"        
-    },
     "cw-ScoreRate-Analyzer-plugin": {
         "name": "班级作业得分率显示插件",
         "description": "一个用于显示近七天年级段及各班作业得分率的插件。",
@@ -155,5 +143,16 @@
         "branch": "main",
         "update_date": "2025/02/03",
         "tag": "实用 | 信息 | 工具 | 班级环境 | 小组件"
+    },
+    "cw-range-name-plugin": {
+        "name": "随机点名",
+        "description": "为Class Widgets 带上随机点名功能",
+        "version": "1.0.0",
+        "plugin_ver": 1,
+        "author": "neko_lfj | RinLit",
+        "url": "https://github.com/nekolfj/cw-range-name-plugin",
+        "branch": "main",
+        "update_date": "2024/2/3",
+        "tag": "实用 | 工具"        
     }
 }
