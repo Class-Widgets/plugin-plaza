@@ -143,7 +143,7 @@
         "branch": "main",
         "update_date": "2025/02/03",
         "tag": "实用 | 信息 | 工具 | 班级环境 | 小组件"
-    },
+    }
     "cw-range-name-plugin": {
         "name": "随机点名",
         "description": "为Class Widgets 带上随机点名功能",
@@ -155,4 +155,5 @@
         "update_date": "2024/2/3",
         "tag": "实用 | 工具"        
     }
+
 }
