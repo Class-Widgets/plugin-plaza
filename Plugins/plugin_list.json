@@ -130,7 +130,8 @@
         "settings": false,
         "url": "https://github.com/nekolfj/cw-time-plugin",
         "branch": "main",
-        "update_date": "2024/1/31"
+        "update_date": "2024/1/31",
+        "tag": "信息 | 小组件"
     },
     "cw-range-name-plugin": {
         "name": "随机点名",
@@ -142,6 +143,17 @@
         "url": "https://github.com/nekolfj/cw-range-name-plugin",
         "branch": "main",
         "update_date": "2024/2/3",
-        "tag": "实用 | 工具"
+        "tag": "实用 | 工具"        
+    },
+    "cw-ScoreRate-Analyzer-plugin": {
+        "name": "班级作业得分率显示插件",
+        "description": "一个用于显示近七天年级段及各班作业得分率的插件。",
+        "version": "1.1.1",
+        "plugin_ver": "1",
+        "author": "LaoShui",
+        "url": "https://github.com/laoshuikaixue/cw-ScoreRate-Analyzer-plugin",
+        "branch": "main",
+        "update_date": "2025/02/03",
+        "tag": "实用 | 信息 | 工具 | 班级环境 | 小组件"
     }
 }
