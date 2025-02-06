@@ -157,7 +157,7 @@
     },
     "cw-CPU-Monitor-plugin": {
         "name": "CPU Monitor",
-        "description": "cpu占用显示",
+        "description": "CPU 占用显示",
         "version": "1.0.0",
         "plugin_ver": 1,
         "author": "windyslime",
