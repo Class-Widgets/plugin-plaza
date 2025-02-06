@@ -154,7 +154,7 @@
         "branch": "main",
         "update_date": "2024/2/5",
         "tag": "实用 | 工具"
-    }
+    },
     "cw-CPU-Monitor-plugin": {
         "name": "CPU Monitor",
         "description": "cpu占用显示",
