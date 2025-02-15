@@ -2,7 +2,24 @@
   "recommend_plugin": [
     "LyricsIslandCW",
     "cw-yiyan-plugin",
+    "cw-range-name-plugin",
     "Class Widgets Csv Import",
-    "LX-music-Lyrics"
+    "LX-music-Lyrics",
+    "cw-weather-forecast-plugin"
+  ],
+  "tags": [
+    "示例",
+    "生活",
+    "实用",
+    "效率",
+    "学习",
+    "信息",
+    "提醒",
+    "自动化",
+    "工具",
+    "娱乐",
+    "新闻",
+    "小组件",
+    "班级环境"
   ]
 }

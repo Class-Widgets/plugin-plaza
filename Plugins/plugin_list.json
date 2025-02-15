@@ -13,23 +13,23 @@
     "cw-ship-plugin": {
         "name": "舟山船班信息展示",
         "description": "这是一个用于展示舟山大岙码头船班信息的插件。",
-        "version": "1.3.3",
+        "version": "1.4.0",
         "plugin_ver": 1,
         "author": "LaoShui",
         "url": "https://github.com/laoshuikaixue/cw-ship-plugin",
         "branch": "main",
-        "update_date": "2025/01/20",
+        "update_date": "2025/02/08",
         "tag": "信息 | 提醒 | 小组件"
     },
     "cw-yiyan-plugin": {
         "name": "每日一言",
         "description": "每天分享一句话，激励大家学习。",
-        "version": "1.3.3",
+        "version": "1.4.0",
         "plugin_ver": 1,
         "author": "LaoShui",
         "url": "https://github.com/laoshuikaixue/cw-yiyan-plugin",
         "branch": "main",
-        "update_date": "2025/01/20",
+        "update_date": "2025/02/08",
         "tag": "学习 | 实用 | 小组件"
     },
     "Class Widgets Csv Import": {
@@ -57,23 +57,23 @@
     "cw-student-on-duty-plugin(LaoShui)": {
         "name": "值日生插件(LaoShui)",
         "description": "一个用于展示班级值日生信息的插件。",
-        "version": "2.2.0",
+        "version": "2.2.2",
         "plugin_ver": "1",
         "author": "LaoShui",
         "url": "https://github.com/laoshuikaixue/cw-student-on-duty-plugin",
         "branch": "main",
-        "update_date": "2025/02/04",
+        "update_date": "2025/02/07",
         "tag": "实用 | 工具 | 提醒 | 班级环境 | 小组件"
     },
     "cw-daily-poetry-plugin": {
         "name": "今日诗词",
         "description": "每天一句诗词名句。",
-        "version": "1.0.0",
+        "version": "1.1.0",
         "plugin_ver": 1,
         "author": "LaoShui",
         "url": "https://github.com/laoshuikaixue/cw-daily-poetry-plugin",
         "branch": "main",
-        "update_date": "2025/01/15",
+        "update_date": "2025/02/08",
         "tag": "学习 | 实用 | 小组件"
     },
     "cw-advanced-ringtones": {
@@ -147,7 +147,7 @@
     "cw-range-name-plugin": {
         "name": "随机点名",
         "description": "为Class Widgets 带上随机点名功能",
-        "version": "1.5",
+        "version": "1.6",
         "plugin_ver": 1,
         "author": "neko_lfj | RinLit",
         "url": "https://github.com/nekolfj/cw-range-name-plugin",
@@ -165,5 +165,38 @@
         "branch": "main",
         "update_date": "2024/2/8",
         "tag": "实用 | 工具"
+    },
+    "cw-check-plugin": {
+        "name": "每日签到",
+        "description": "为 Class Widgets 添加签到功能",
+        "version": "1.0.0",
+        "plugin_ver": 1,
+        "author": "xuhaoyang123321",
+        "url": "https://github.com/xuhaoyang123321/CW-Check",
+        "branch": "main",
+        "update_date": "2025/2/5",
+        "tag": "实用 | 工具 | 学习"
+    },
+    "cw-weather-forecast-plugin": {
+        "name": "天气预报",
+        "description": "定时预报接下来三天及接下来三小时的天气。（已适配小米天气）",
+        "version": "1.1.0",
+        "plugin_ver": 2,
+        "author": "LaoShui",
+        "url": "https://github.com/laoshuikaixue/cw-weather-forecast-plugin",
+        "branch": "main",
+        "update_date": "2025/02/11",
+        "tag": "信息 | 提醒 | 小组件"
+    },
+    "cw-student-on-duty-plugin(桃子)": {
+        "name": "值日生插件(桃子)",
+        "description": "一个用于展示班级值日生信息的插件。采用了和老水版不同的读取逻辑",
+        "version": "0.0.2",
+        "plugin_ver": "1",
+        "author": "桃子",
+        "url": "https://github.com/Welsonpeaches/cw-student-on-duty-plugin",
+        "branch": "main",
+        "update_date": "2025/01/12",
+        "tag": "实用 | 工具 | 提醒 | 班级环境 | 小组件"
     }
 }
