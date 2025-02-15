@@ -192,11 +192,11 @@
         "name": "值日生插件(桃子)",
         "description": "一个用于展示班级值日生信息的插件。采用了和老水版不同的读取逻辑",
         "version": "0.0.2",
-        "plugin_ver": "1",
+        "plugin_ver": "2",
         "author": "桃子",
         "url": "https://github.com/Welsonpeaches/cw-student-on-duty-plugin",
         "branch": "main",
-        "update_date": "2025/01/12",
+        "update_date": "2025/02/15",
         "tag": "实用 | 工具 | 提醒 | 班级环境 | 小组件"
     },
     "cw-text-plugin": {
@@ -209,5 +209,16 @@
         "branch": "main",
         "update_date": "2025/02/15",
         "tag": "实用 | 提醒 | 小组件"
+    },
+        "cw-blank-plugin": {
+        "name": "blank",
+        "description": "嫌你的cw不够长吗？这个插件来帮你！",
+        "version": "0.0.1",
+        "plugin_ver": "2",
+        "author": "wangjinyi425",
+        "url": "https://github.com/wangjinyi425/cw-text-plugin",
+        "branch": "main",
+        "update_date": "2025/02/15",
+        "tag": "实用"
     }
 }
