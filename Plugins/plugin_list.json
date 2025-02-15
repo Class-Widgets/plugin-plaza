@@ -210,4 +210,15 @@
         "update_date": "2025/02/15",
         "tag": "实用 | 提醒 | 小组件"
     }
+    "cw-blank-plugin": {
+        "name": "空白",
+        "description": "嫌你的cw不够长？这款空白组件来帮你让你的cw变长！",
+        "version": "1.0.0",
+        "plugin_ver": "1",
+        "author": "wangjinyi425",
+        "url": "https://github.com/wangjinyi425/cw-text-plugin",
+        "branch": "main",
+        "update_date": "2025/02/15",
+        "tag": "实用"
+    }
 }
