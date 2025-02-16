@@ -192,7 +192,7 @@
         "name": "值日生插件(桃子)",
         "description": "一个用于展示班级值日生信息的插件。采用了和老水版不同的读取逻辑",
         "version": "1.0.0",
-        "plugin_ver": "12",
+        "plugin_ver": "2",
         "author": "桃子",
         "url": "https://github.com/Welsonpeaches/cw-student-on-duty-plugin",
         "branch": "main",
