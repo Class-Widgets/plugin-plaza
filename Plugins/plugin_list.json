@@ -202,12 +202,12 @@
     "Bloret Launcher": {
         "name": "Class Widgets Csv Import",
         "description": "百络谷 Minecraft 启动器",
-        "version": "4.0",
+        "version": "4.1",
         "plugin_ver": 1,
         "author": "Bloret",
         "url": "https://github.com/BloretCrew/Bloret-Launcher",
         "branch": "main",
-        "update_date": "2025/2/22",
+        "update_date": "2025/2/23",
         "tag": "娱乐 | 信息"
     }
 }
