@@ -198,5 +198,16 @@
         "branch": "main",
         "update_date": "2025/2/15",
         "tag": "实用 | 提醒 | 小组件"
+    },
+        "Bloret Launcher": {
+        "name": "Class Widgets Csv Import",
+        "description": "百络谷 Minecraft 启动器",
+        "version": "4.0",
+        "plugin_ver": 1,
+        "author": "Bloret",
+        "url": "https://github.com/BloretCrew/Bloret-Launcher",
+        "branch": "main",
+        "update_date": "2025/2/22",
+        "tag": "娱乐 | 信息"
     }
 }
