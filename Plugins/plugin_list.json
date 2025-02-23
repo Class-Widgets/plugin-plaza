@@ -198,5 +198,16 @@
         "branch": "main",
         "update_date": "2025/2/15",
         "tag": "实用 | 提醒 | 小组件"
+    },
+    "cw-holiday-plugin": {
+        "name": "假期倒计时",
+        "description": "法定节假日倒计时",
+        "version": "1.0.0",
+        "plugin_ver": "1",
+        "author": "Luren",
+        "url": "https://github.com/luren-dc/cw-holiday-plugin",
+        "branch": "main",
+        "update_date": "2025/2/23",
+        "tag": "实用 | 提醒 | 小组件"
     }
 }
