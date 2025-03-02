@@ -169,12 +169,12 @@
     "cw-weather-forecast-plugin": {
         "name": "天气预报",
         "description": "定时预报接下来三天及接下来三小时的天气。（已适配小米天气）",
-        "version": "1.1.0",
+        "version": "1.2.0",
         "plugin_ver": 2,
         "author": "LaoShui",
         "url": "https://github.com/laoshuikaixue/cw-weather-forecast-plugin",
         "branch": "main",
-        "update_date": "2025/02/11",
+        "update_date": "2025/03/02",
         "tag": "信息 | 提醒 | 小组件"
     },
     "cw-student-on-duty-plugin(桃子)": {
