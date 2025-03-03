@@ -201,11 +201,11 @@
         "tag": "实用 | 提醒 | 小组件"
     },
     "Bloret Launcher": {
-        "name": "Class Widgets Csv Import",
+        "name": "Bloret Launcher",
         "description": "百络谷 Minecraft 启动器",
-        "version": "4.1",
+        "version": "4.2.1",
         "plugin_ver": 1,
-        "author": "Bloret",
+        "author": "Bloret / Detritalw",
         "url": "https://github.com/BloretCrew/Bloret-Launcher",
         "branch": "Class-Widgets",
         "update_date": "2025/2/23",
