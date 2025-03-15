@@ -198,5 +198,16 @@
         "branch": "main",
         "update_date": "2025/2/15",
         "tag": "实用 | 提醒 | 小组件"
+    },
+    "NamePicker4CW": {
+        "name": "NamePicker x Class Widgets",
+        "description": "使NamePicker的点名结果在Class Widgets上显示",
+        "version": "1.0.0",
+        "plugin_ver": "1",
+        "author": "LHGS-github",
+        "url": "https://github.com/NamePickerOrg/NamePicker4CW",
+        "branch": "main",
+        "update_date": "2025/3/15",
+        "tag": "实用 | 提醒 | 工具"
     }
 }
