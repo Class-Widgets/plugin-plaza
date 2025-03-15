@@ -209,5 +209,16 @@
         "branch": "main",
         "update_date": "2025/3/15",
         "tag": "实用 | 提醒 | 工具"
+    },
+    "Bloret Launcher": {
+        "name": "Bloret Launcher",
+        "description": "百络谷 Minecraft 启动器",
+        "version": "4.2.1",
+        "plugin_ver": 1,
+        "author": "Bloret / Detritalw",
+        "url": "https://github.com/BloretCrew/Bloret-Launcher",
+        "branch": "Class-Widgets",
+        "update_date": "2025/2/23",
+        "tag": "娱乐 | 信息"
     }
 }
