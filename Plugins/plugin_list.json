@@ -214,7 +214,7 @@
         "name": "TeachConnect CW插件版",
         "description": "这是TeachConnect CW插件版",
         "version": "0.1.0",
-        "plugin_ver": "1.1.7.1",
+        "plugin_ver": "1",
         "author": "Wakana_0",
         "settings": true,
         "url": "https://github.com/Wakana-0/TeachConnect/tree/TC-for-CW",
