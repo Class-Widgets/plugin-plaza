@@ -216,7 +216,7 @@
         "version": "0.1.0",
         "plugin_ver": "1",
         "author": "Wakana_0",
-        "settings": true,
+        "settings": false,
         "url": "https://github.com/Wakana-0/TeachConnect/tree/TC-for-CW",
         "branch": "main",
         "update_date": "2025/3/16",
