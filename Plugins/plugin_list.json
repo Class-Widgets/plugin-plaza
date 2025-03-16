@@ -210,16 +210,16 @@
         "update_date": "2025/3/15",
         "tag": "实用 | 提醒 | 工具"
     },
-    {
-    "name": "TeachConnect CW插件版",
-    "description": "这是TeachConnect CW插件版",
-    "version": "0.1.0",
-    "plugin_ver": "1.1.7.1",
-    "author": "Wakana_0",
-    "settings": true,
-    "url": "https://github.com/Wakana-0/TeachConnect/tree/TC-for-CW",
-    "branch": "main",
-    "update_date": "2025/3/16",
-    "tag":"v0.1.0"
-}
+    "TeachConnect4CW":{
+        "name": "TeachConnect CW插件版",
+        "description": "这是TeachConnect CW插件版",
+        "version": "0.1.0",
+        "plugin_ver": "1.1.7.1",
+        "author": "Wakana_0",
+        "settings": true,
+        "url": "https://github.com/Wakana-0/TeachConnect/tree/TC-for-CW",
+        "branch": "main",
+        "update_date": "2025/3/16",
+        "tag":"v0.1.0"
+    }
 }
