@@ -213,13 +213,13 @@
     "TeachConnect4CW": {
         "name": "TeachConnect CW插件版",
         "description": "这是TeachConnect CW插件版",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "plugin_ver": "1",
         "author": "Wakana_0",
-        "settings": true,
+        "settings": false,
         "url": "https://github.com/Wakana-0/TeachConnect/tree/TC-for-CW",
         "branch": "main",
         "update_date": "2025/3/16",
-        "tag": "v0.1.0"
+        "tag": "实用 | 提醒 | 工具"
     }
 }
