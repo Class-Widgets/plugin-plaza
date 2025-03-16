@@ -213,7 +213,7 @@
     "TeachConnect4CW": {
         "name": "TeachConnect CW插件版",
         "description": "这是TeachConnect CW插件版",
-        "version": "0.1.1",
+        "version": "0.1.0",
         "plugin_ver": "1",
         "author": "Wakana_0",
         "settings": false,
