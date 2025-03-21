@@ -1,0 +1,13 @@
+{
+    "cw-text-plugin": {
+        "name": "自定义文本",
+        "description": "实现自定义文本。",
+        "version": "1.0.0",
+        "plugin_ver": "1",
+        "author": "wangjinyi425",
+        "url": "https://github.com/wangjinyi425/cw-text-plugin",
+        "branch": "main",
+        "update_date": "2025/2/15",
+        "tag": "实用 | 提醒 | 小组件"
+    }
+}

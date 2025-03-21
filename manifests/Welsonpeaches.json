@@ -1,0 +1,13 @@
+{
+    "cw-student-on-duty-plugin(桃子)": {
+        "name": "值日生插件(桃子)",
+        "description": "一个用于展示班级值日生信息的插件。采用了和老水版不同的读取逻辑",
+        "version": "1.0.0",
+        "plugin_ver": "1",
+        "author": "桃子",
+        "url": "https://github.com/Welsonpeaches/cw-student-on-duty-plugin",
+        "branch": "main",
+        "update_date": "2025/2/16",
+        "tag": "实用 | 工具 | 提醒 | 班级环境 | 小组件"
+    }
+}

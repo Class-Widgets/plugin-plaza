@@ -1,0 +1,13 @@
+{
+    "cw-example-plugin": {
+        "name": "Class Widgets 插件示例",
+        "description": "这是一个示例插件。",
+        "version": "1.1.0",
+        "plugin_ver": 1,
+        "author": "Rin",
+        "url": "https://github.com/RinLit-233-shiroko/cw-example-plugin",
+        "branch": "main",
+        "update_date": "2024/12/6",
+        "tag": "示例"
+    }
+}

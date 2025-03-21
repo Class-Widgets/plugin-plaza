@@ -1,0 +1,90 @@
+{
+    "cw-ship-plugin": {
+        "name": "舟山船班信息展示",
+        "description": "这是一个用于展示舟山大岙码头船班信息的插件。",
+        "version": "1.4.0",
+        "plugin_ver": 1,
+        "author": "LaoShui",
+        "url": "https://github.com/laoshuikaixue/cw-ship-plugin",
+        "branch": "main",
+        "update_date": "2025/02/08",
+        "tag": "信息 | 提醒 | 小组件"
+    },
+    "cw-yiyan-plugin": {
+        "name": "每日一言",
+        "description": "每天分享一句话，激励大家学习。",
+        "version": "1.4.0",
+        "plugin_ver": 1,
+        "author": "LaoShui",
+        "url": "https://github.com/laoshuikaixue/cw-yiyan-plugin",
+        "branch": "main",
+        "update_date": "2025/02/08",
+        "tag": "学习 | 实用 | 小组件"
+    },
+    "cw-quiet-time-reminder-plugin": {
+        "name": "静班提醒",
+        "description": "一个在静班时间发送通知以进行提醒的插件。",
+        "version": "1.1.2",
+        "plugin_ver": 1,
+        "author": "LaoShui",
+        "url": "https://github.com/laoshuikaixue/cw-quiet-time-reminder-plugin",
+        "branch": "main",
+        "update_date": "2025/01/20",
+        "tag": "信息 | 提醒 | 小组件"
+    },
+    "cw-student-on-duty-plugin(LaoShui)": {
+        "name": "值日生插件(LaoShui)",
+        "description": "一个用于展示班级值日生信息的插件。",
+        "version": "2.2.2",
+        "plugin_ver": "1",
+        "author": "LaoShui",
+        "url": "https://github.com/laoshuikaixue/cw-student-on-duty-plugin",
+        "branch": "main",
+        "update_date": "2025/02/07",
+        "tag": "实用 | 工具 | 提醒 | 班级环境 | 小组件"
+    },
+    "cw-daily-poetry-plugin": {
+        "name": "今日诗词",
+        "description": "每天一句诗词名句。",
+        "version": "1.1.0",
+        "plugin_ver": 1,
+        "author": "LaoShui",
+        "url": "https://github.com/laoshuikaixue/cw-daily-poetry-plugin",
+        "branch": "main",
+        "update_date": "2025/02/08",
+        "tag": "学习 | 实用 | 小组件"
+    },
+    "LX-music-Lyrics": {
+        "name": "LX-music-Lyrics",
+        "description": "一个用于显示LX-music软件歌词的插件。",
+        "version": "1.1.6",
+        "plugin_ver": "1",
+        "author": "LaoShui",
+        "url": "https://github.com/laoshuikaixue/cw-LX-music-lyrics-plugin",
+        "branch": "main",
+        "update_date": "2025/01/28",
+        "tag": "实用 | 工具 | 小组件"
+    },
+    "cw-ScoreRate-Analyzer-plugin": {
+        "name": "班级作业得分率显示插件",
+        "description": "一个用于显示近七天年级段及各班作业得分率的插件。",
+        "version": "1.1.1",
+        "plugin_ver": "1",
+        "author": "LaoShui",
+        "url": "https://github.com/laoshuikaixue/cw-ScoreRate-Analyzer-plugin",
+        "branch": "main",
+        "update_date": "2025/02/03",
+        "tag": "实用 | 信息 | 工具 | 班级环境 | 小组件"
+    },
+    "cw-weather-forecast-plugin": {
+        "name": "天气预报",
+        "description": "定时预报接下来三天及接下来三小时的天气。（已适配小米天气）",
+        "version": "1.2.0",
+        "plugin_ver": 2,
+        "author": "LaoShui",
+        "url": "https://github.com/laoshuikaixue/cw-weather-forecast-plugin",
+        "branch": "main",
+        "update_date": "2025/03/02",
+        "tag": "信息 | 提醒 | 小组件"
+    }
+}

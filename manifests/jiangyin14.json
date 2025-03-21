@@ -1,0 +1,13 @@
+{
+    "LyricsIslandCW": {
+        "name": "LyricsIsland",
+        "description": "在主界面上显示来自音乐软件的歌词。",
+        "version": "1.0.0",
+        "plugin_ver": "1",
+        "author": "LaoShui,jiangyin14",
+        "url": "https://github.com/jiangyin14/LyricsIslandCW",
+        "branch": "master",
+        "update_date": "2025/1/21",
+        "tag": "实用 | 工具 | 小组件"
+    }
+}
