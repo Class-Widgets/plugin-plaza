@@ -213,12 +213,12 @@
     "Bloret Launcher": {
         "name": "Bloret Launcher",
         "description": "百络谷 Minecraft 启动器",
-        "version": "6",
+        "version": "6.1",
         "plugin_ver": 1,
         "author": "Bloret / Detritalw",
         "url": "https://github.com/BloretCrew/Bloret-Launcher",
         "branch": "Class-Widgets",
-        "update_date": "2025/04/20",
+        "update_date": "2025/04/26",
         "tag": "娱乐 | 信息"
     },
     "TeachConnect4CW": {
