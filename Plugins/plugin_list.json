@@ -245,4 +245,19 @@
         "update_date": "2025/04/03",
         "tag": "实用 | 提醒 | 信息"
     }
+    "您的插件仓库名称": {
+        "name": "MONKEY-COUNTDOWN",
+        "description": "倒数天，但是工作日",
+        "version": "1.0.0",
+        "plugin_ver": "1",
+        "author": "fengyushaonian",
+    
+        "url": "https://github.com/fengyushaonian/monkey-s-plugins",
+        "branch": "main",
+    
+        "update_date": "2025/4/30",
+    
+        "tag": "实用 | 提醒 | 信息"
+    }
+
 }
