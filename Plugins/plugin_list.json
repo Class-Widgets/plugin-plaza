@@ -244,18 +244,18 @@
         "branch": "main",
         "update_date": "2025/04/03",
         "tag": "实用 | 提醒 | 信息"
-    }
-    "您的插件仓库名称": {
-        "name": "MONKEY-COUNTDOWN",
+    },
+    "cw-plugin-count-down": {
+        "name": "工作日倒计天",
         "description": "倒数天，但是工作日",
-        "version": "1.0.0",
+        "version": "1.1.1",
         "plugin_ver": "1",
         "author": "fengyushaonian",
     
-        "url": "https://github.com/fengyushaonian/monkey-s-plugins",
+        "url": "https://github.com/fengyushaonian/cw-plugin-count-down/",
         "branch": "main",
     
-        "update_date": "2025/4/30",
+        "update_date": "2025/5/2",
     
         "tag": "实用 | 提醒 | 信息"
     }
