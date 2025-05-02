@@ -251,12 +251,9 @@
         "version": "1.1.1",
         "plugin_ver": "1",
         "author": "fengyushaonian",
-    
-        "url": "https://github.com/fengyushaonian/cw-plugin-count-down/",
+        "url": "https://github.com/fengyushaonian/cw-plugin-count-down",
         "branch": "main",
-    
         "update_date": "2025/5/2",
-    
         "tag": "实用 | 提醒 | 信息"
     }
 
