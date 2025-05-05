@@ -1,0 +1,13 @@
+{
+    "cw-check-plugin": {
+        "name": "每日签到",
+        "description": "为 Class Widgets 添加签到功能",
+        "version": "1.0.0",
+        "plugin_ver": 1,
+        "author": "xuhaoyang123321",
+        "url": "https://github.com/xuhaoyang123321/CW-Check",
+        "branch": "main",
+        "update_date": "2025/2/5",
+        "tag": "实用 | 工具 | 学习"
+    }
+}

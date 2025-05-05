@@ -1,0 +1,25 @@
+{
+    "cw-time-plugin": {
+        "name": "显示时间",
+        "description": "可以在classwidgets上显示当前时间",
+        "version": "1.0.0",
+        "plugin_ver": 1,
+        "author": "neko_lfj",
+        "settings": false,
+        "url": "https://github.com/nekolfj/cw-time-plugin",
+        "branch": "main",
+        "update_date": "2024/1/31",
+        "tag": "信息 | 小组件"
+    },
+    "cw-range-name-plugin": {
+        "name": "随机点名",
+        "description": "为Class Widgets 带上随机点名功能",
+        "version": "1.6",
+        "plugin_ver": 1,
+        "author": "neko_lfj | RinLit",
+        "url": "https://github.com/nekolfj/cw-range-name-plugin",
+        "branch": "main",
+        "update_date": "2024/2/5",
+        "tag": "实用 | 工具"
+    }
+}
