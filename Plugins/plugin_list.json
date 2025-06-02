@@ -24,12 +24,12 @@
     "cw-yiyan-plugin": {
         "name": "每日一言",
         "description": "每天分享一句话，激励大家学习。",
-        "version": "1.4.0",
+        "version": "1.5.0",
         "plugin_ver": 1,
         "author": "LaoShui",
         "url": "https://github.com/laoshuikaixue/cw-yiyan-plugin",
         "branch": "main",
-        "update_date": "2025/02/08",
+        "update_date": "2025/03/23",
         "tag": "学习 | 实用 | 小组件"
     },
     "Class Widgets Csv Import": {
@@ -79,12 +79,12 @@
     "cw-advanced-ringtones": {
         "name": "高级铃声",
         "description": "一个为Class Widgets提供高级铃声的插件",
-        "version": "1.1.2.fix",
+        "version": "1.1.3",
         "plugin_ver": 1,
         "author": "mliucc",
         "url": "https://github.com/mliucc/cw-advanced-ringtones",
         "branch": "main",
-        "update_date": "2025/1/31",
+        "update_date": "2025/2/24",
         "tag": "实用 | 工具| 提醒 | 信息"
     },
     "LyricsIslandCW": {
@@ -155,17 +155,6 @@
         "update_date": "2024/2/5",
         "tag": "实用 | 工具"
     },
-    "cw-CPU-Monitor-plugin": {
-        "name": "CPU Monitor",
-        "description": "CPU 占用显示（现已支持多核）",
-        "version": "1.1.0",
-        "plugin_ver": 1,
-        "author": "windyslime",
-        "url": "https://github.com/windyslime/classwidget_CPU_Monitor",
-        "branch": "main",
-        "update_date": "2024/2/8",
-        "tag": "实用 | 工具"
-    },
     "cw-check-plugin": {
         "name": "每日签到",
         "description": "为 Class Widgets 添加签到功能",
@@ -180,12 +169,12 @@
     "cw-weather-forecast-plugin": {
         "name": "天气预报",
         "description": "定时预报接下来三天及接下来三小时的天气。（已适配小米天气）",
-        "version": "1.1.0",
+        "version": "1.2.0",
         "plugin_ver": 2,
         "author": "LaoShui",
         "url": "https://github.com/laoshuikaixue/cw-weather-forecast-plugin",
         "branch": "main",
-        "update_date": "2025/02/11",
+        "update_date": "2025/03/02",
         "tag": "信息 | 提醒 | 小组件"
     },
     "cw-student-on-duty-plugin(桃子)": {
@@ -207,7 +196,64 @@
         "author": "wangjinyi425",
         "url": "https://github.com/wangjinyi425/cw-text-plugin",
         "branch": "main",
-        "update_date": "2025/02/15",
+        "update_date": "2025/2/15",
         "tag": "实用 | 提醒 | 小组件"
+    },
+    "NamePicker4CW": {
+        "name": "NamePicker x Class Widgets",
+        "description": "使NamePicker的点名结果在Class Widgets上显示",
+        "version": "1.0.0",
+        "plugin_ver": "1",
+        "author": "LHGS-github",
+        "url": "https://github.com/NamePickerOrg/NamePicker4CW",
+        "branch": "main",
+        "update_date": "2025/3/15",
+        "tag": "实用 | 提醒 | 工具"
+    },
+    "Bloret Launcher": {
+        "name": "Bloret Launcher",
+        "description": "百络谷 Minecraft 启动器",
+        "version": "6.2",
+        "plugin_ver": 1,
+        "author": "Bloret / Detritalw",
+        "url": "https://github.com/BloretCrew/Bloret-Launcher",
+        "branch": "Class-Widgets",
+        "update_date": "2025/05/04",
+        "tag": "娱乐 | 信息"
+    },
+    "TeachConnect4CW": {
+        "name": "TeachConnect CW插件版",
+        "description": "这是TeachConnect CW插件版",
+        "version": "1.0.2",
+        "plugin_ver": "1",
+        "author": "Wakana_0",
+        "settings": false,
+        "url": "https://github.com/Wakana-0/TeachConnect-for-CW",
+        "branch": "main",
+        "update_date": "2025/4/25",
+        "tag": "实用 | 提醒 | 工具"
+    },
+    "TomorrowTip": {
+        "name": "明日课程提醒",
+        "description": "在设定的时间显示明日课程信息",
+        "version": "1.0.0",
+        "plugin_ver": "1",
+        "author": "白杳",
+        "settings": true,
+        "url": "https://github.com/baiyao105/cw-tomorrow-tip",
+        "branch": "main",
+        "update_date": "2025/04/03",
+        "tag": "实用 | 提醒 | 信息"
+    },
+    "cw-plugin-count-down": {
+        "name": "工作日倒计天",
+        "description": "倒数天，但是工作日",
+        "version": "1.1.1",
+        "plugin_ver": "1",
+        "author": "fengyushaonian",
+        "url": "https://github.com/fengyushaonian/cw-plugin-count-down",
+        "branch": "main",
+        "update_date": "2025/4/30",
+        "tag": "实用 | 提醒 | 信息"
     }
 }
