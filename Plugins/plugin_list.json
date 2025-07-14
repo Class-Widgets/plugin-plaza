@@ -255,5 +255,17 @@
         "branch": "main",
         "update_date": "2025/4/30",
         "tag": "实用 | 提醒 | 信息"
+    },
+    "cw-schedule-server-plugin": {
+        "name": "课程表服务器",
+        "description": "开启一个课程表服务器",
+        "version": "1.0.0",
+        "plugin_ver": "1",
+        "author": "walunt",
+        "settings": true,
+        "url": "https://github.com/walunt-r/cw-schedule-server-plugin",
+        "branch": "main",
+        "update_date": "2025/07/15",
+        "tag":"工具"
     }
 }
