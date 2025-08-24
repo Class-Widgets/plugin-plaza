@@ -199,6 +199,17 @@
         "update_date": "2025/2/15",
         "tag": "实用 | 提醒 | 小组件"
     },
+    "NamePicker4CW Unoffical": {
+        "name": "NamePicker x Class Widgets Unoffical",
+        "description": "使NamePicker的点名结果在Class Widgets上显示，社区分支",
+        "version": "1.0.1",
+        "plugin_ver": "1",
+        "author": "Class-Widgets-Community",
+        "url": "https://github.com/Class-Widgets-Community/NamePicker4CW-unoffical",
+        "branch": "main",
+        "update_date": "2025/8/24",
+        "tag": "实用 | 提醒 | 工具"
+    },
     "Bloret Launcher": {
         "name": "Bloret Launcher",
         "description": "百络谷 Minecraft 启动器",
