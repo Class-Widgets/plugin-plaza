@@ -13,12 +13,12 @@
     "cw-ship-plugin": {
         "name": "舟山船班信息展示",
         "description": "这是一个用于展示舟山大岙码头船班信息的插件。",
-        "version": "1.4.0",
+        "version": "1.5.0",
         "plugin_ver": 1,
         "author": "LaoShui",
         "url": "https://github.com/laoshuikaixue/cw-ship-plugin",
         "branch": "main",
-        "update_date": "2025/02/08",
+        "update_date": "2025/08/27",
         "tag": "信息 | 提醒 | 小组件"
     },
     "cw-yiyan-plugin": {
