@@ -225,13 +225,13 @@
     "TomorrowTip": {
         "name": "明日课程提醒",
         "description": "在设定的时间显示明日课程信息",
-        "version": "1.0.0",
+        "version": "1.2.0",
         "plugin_ver": "1",
         "author": "白杳",
         "settings": true,
         "url": "https://github.com/baiyao105/cw-tomorrow-tip",
         "branch": "main",
-        "update_date": "2025/04/03",
+        "update_date": "2025/09/21",
         "tag": "实用 | 提醒 | 信息"
     },
     "cw-plugin-count-down": {
