@@ -256,9 +256,9 @@
         "update_date": "2025/8/11",
         "tag": "实用 | 提醒 | 信息"
     },
-    "SecRandom-Class-Widgets-plugin": {
-        "name": "SecRandom CW联动",
-        "description": "让SecRandom与Class-Widgets联动，解锁许多实用的功能",
+    "cw-SecRandom-CW-plugin": {
+        "name": "SecRandom-CW",
+        "description": "SecRandom x Class-Widgets联动插件",
         "version": "1.0.1",
         "plugin_ver": "1",
         "author": "SECTL",
