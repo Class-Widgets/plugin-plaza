@@ -259,12 +259,12 @@
     "cw-SecRandom-CW-plugin": {
         "name": "SecRandom-CW",
         "description": "SecRandom x Class-Widgets联动插件",
-        "version": "1.0.1",
+        "version": "1.0.2",
         "plugin_ver": "1",
         "author": "SECTL",
         "url": "https://github.com/SECTL/cw-SecRandom-CW-plugin",
         "branch": "main",
-        "update_date": "2025/10/02",
+        "update_date": "2025/10/07",
         "tag": "实用 | 提醒 | 工具"
     }
 }
