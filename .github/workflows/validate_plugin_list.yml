@@ -57,4 +57,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           issue-number: ${{ github.event.pull_request.number }}
           edit-mode: replace
-          body-file: scripts/_artifacts/comment.md
+          body-file: artifacts/comment.md

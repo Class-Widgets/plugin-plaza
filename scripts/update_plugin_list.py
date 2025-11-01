@@ -33,12 +33,17 @@ def update_plugin_list():
     with open(PLUGIN_LIST_PATH, encoding="utf-8") as f:
         raw_registry = json.load(f)
     try:
-        registry = Registry.model_validate(raw_registry).root
+        validated_registry = Registry.model_validate(raw_registry)
+        registry = raw_registry
+        print("✅ 插件列表结构验证通过")
     except ValidationError as e:
         print("⚠️ 当前插件列表结构存在问题:")
         print(e)
         registry = raw_registry
     for plugin_key, plugin_info in registry.items():
+        if not isinstance(plugin_info, dict):
+            print(f"⚠️ 插件 {plugin_key} 的数据格式不正确, 跳过")
+            continue
         plugin_data = fetch_plugin_info(plugin_info["url"], plugin_info["branch"], plugin_key)
         if plugin_data:
             try:

@@ -331,12 +331,21 @@ def validate_registry() -> None:
         sys.exit(1)
     except Exception as e:
         print(f"❌ 验证过程中出现错误: {e!s}")
+        summary = f"❌ **验证过程中出现错误**\n\n**错误信息: **\n{e!s}"
+        artifacts_dir = Path("artifacts")
+        artifacts_dir.mkdir(parents=True, exist_ok=True)
+        with open(artifacts_dir / "comment.md", "w", encoding="utf-8") as f:
+            f.write(summary)
         sys.exit(1)
 
 
 def main() -> None:
     """主函数"""
-    os.getenv("IS_COMMIT", "false").lower() == "true"
+    action = os.getenv("ACTION", "").upper()
+    if action == "REGISTRY_VALIDATE":
+        validate_registry()
+        return
+    is_commit = os.getenv("IS_COMMIT", "false").lower() == "true"
     is_revalidate = os.getenv("IS_REVALIDATE", "false").lower() == "true"
 
     if is_revalidate:
