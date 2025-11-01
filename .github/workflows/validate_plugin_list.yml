@@ -53,6 +53,7 @@ jobs:
       - name: Comment validation summary (PR only)
         if: github.event_name == 'pull_request'
         uses: peter-evans/create-or-update-comment@v4
+        continue-on-error: true
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           issue-number: ${{ github.event.pull_request.number }}
