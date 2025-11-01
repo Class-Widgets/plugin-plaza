@@ -270,12 +270,12 @@
     "cw-Lessons—Displayer": {
         "name": "Lessons Displayer 今日课程展示",
         "description": "展示今日的课程，提供熄屏模式与白板模式",
-        "version": "1.0.0",
+        "version": "1.0.2",
         "plugin_ver": "1",
         "author": "Yersmagit",
         "url": "https://github.com/Yersmagit/cw-lessons-displayer",
         "branch": "main",
-        "update_date": "2025/04/06",
+        "update_date": "2025/11/01",
         "tag": "实用 | 自动化 | 工具 | 信息"
     }
 }
