@@ -1,0 +1,315 @@
+name: Plugin Submission Review
+
+on:
+  issues:
+    types: [opened, edited]
+  issue_comment:
+    types: [created, edited]
+
+jobs:
+  metadata-validation:
+    runs-on: ubuntu-latest
+    if: contains(toJson(github.event.issue.labels.*.name), 'plugin-add')
+    outputs:
+      needs_repo_check: ${{ steps.validate.outputs.needs_repo_check }}
+      repo_url: ${{ steps.extract-repo.outputs.repo_url }}
+      repo_branch: ${{ steps.extract-repo.outputs.repo_branch }}
+      is_commit: ${{ steps.action.outputs.is_commit }}
+      is_revalidate: ${{ steps.action.outputs.is_revalidate }}
+      commit_requested: ${{ steps.check-commit.outputs.commit_requested }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python & uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          python-version: 3.11
+          activate-environment: true
+
+      - name: Cache Python dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/uv
+            ~\AppData\Local\uv
+          key: ${{ runner.os }}-uv-cache-${{ hashFiles('uv.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-uv-cache-
+
+      - name: Install dependencies
+        run: |
+          uv pip install pydantic requests
+
+      - name: Determine action type
+        id: action
+        run: |
+          if [[ "${{ github.event.comment.body }}" == *"执行提交"* ]] || [[ "${{ github.event.issue.body }}" == *"[x] 执行提交"* ]]; then
+            echo "is_commit=true" >> $GITHUB_OUTPUT
+          else
+            echo "is_commit=false" >> $GITHUB_OUTPUT
+          fi
+          if [[ "${{ github.event.comment.body }}" == *"重新验证"* ]] || [[ "${{ github.event.issue.body }}" == *"[x] 重新验证"* ]]; then
+            echo "is_revalidate=true" >> $GITHUB_OUTPUT
+          else
+            echo "is_revalidate=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Run validation
+        id: validate
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          COMMENT_BODY: ${{ github.event.comment.body }}
+          IS_COMMIT: ${{ steps.action.outputs.is_commit }}
+          IS_REVALIDATE: ${{ steps.action.outputs.is_revalidate }}
+        run: uv run scripts/plugin_validation.py
+
+      - name: Check commit flag
+        id: check-commit
+        run: |
+          if [ -f artifacts/commit.flag ]; then
+            echo "commit_requested=true" >> $GITHUB_OUTPUT
+          else
+            echo "commit_requested=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Extract repository info
+        id: extract-repo
+        if: steps.validate.outputs.needs_repo_check == 'true'
+        run: |
+          if [ -f artifacts/validation_result.json ]; then
+            repo_url=$(uv run python -c "import json; data=json.load(open('artifacts/validation_result.json')); print(data['registry_item']['url'])")
+            repo_branch=$(uv run python -c "import json; data=json.load(open('artifacts/validation_result.json')); print(data['registry_item']['branch'])")
+            repo_path=$(echo "$repo_url" | sed 's|https://github.com/||' | sed 's|/$||')
+            echo "repo_url=$repo_path" >> $GITHUB_OUTPUT
+            echo "repo_branch=$repo_branch" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Upload validation artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: validation-results
+          path: artifacts/
+          retention-days: 1
+
+  repository-check:
+    runs-on: ubuntu-latest
+    needs: metadata-validation
+    if: needs.metadata-validation.outputs.needs_repo_check == 'true'
+    outputs:
+      repo_check_success: ${{ steps.repo-check.outputs.repo_check_success }}
+
+    steps:
+      - name: Checkout main repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python & uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          python-version: 3.11
+          activate-environment: true
+
+      - name: Cache Python dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/uv
+            ~\AppData\Local\uv
+          key: ${{ runner.os }}-uv-cache-${{ hashFiles('uv.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-uv-cache-
+
+      - name: Install dependencies
+        run: |
+          uv pip install pydantic requests
+
+      - name: Checkout plugin repository
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ needs.metadata-validation.outputs.repo_url }}
+          ref: ${{ needs.metadata-validation.outputs.repo_branch }}
+          path: plugin-repo
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run repository check
+        id: repo-check
+        continue-on-error: true
+        env:
+          REPO_DIR: plugin-repo
+        run: |
+          uv run scripts/repo_check.py
+          if [ -f artifacts/repo_check_result.json ]; then
+            repo_success=$(uv run python -c "import json; print(json.load(open('artifacts/repo_check_result.json'))['success'])")
+            echo "repo_check_success=$repo_success" >> $GITHUB_OUTPUT
+          else
+            echo "repo_check_success=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Upload repository check artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: repo-check-results
+          path: artifacts/
+          retention-days: 1
+
+  integration:
+    runs-on: ubuntu-latest
+    needs: [metadata-validation, repository-check]
+    if: always() && needs.metadata-validation.result == 'success'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python & uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          python-version: 3.11
+          activate-environment: true
+
+      - name: Cache Python dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/uv
+            ~\AppData\Local\uv
+          key: ${{ runner.os }}-uv-cache-${{ hashFiles('uv.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-uv-cache-
+
+      - name: Install dependencies
+        run: |
+          uv pip install pydantic requests
+
+      - name: Download validation artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: validation-results
+          path: validation-artifacts/
+
+      - name: Download repository check artifacts
+        if: needs.metadata-validation.outputs.needs_repo_check == 'true'
+        uses: actions/download-artifact@v4
+        with:
+          name: repo-check-results
+          path: repo-check-artifacts/
+        continue-on-error: true
+
+      - name: Combine results and prepare final comment
+        run: |
+          mkdir -p final-artifacts
+          if [ -f validation-artifacts/comment.md ]; then
+            cp validation-artifacts/comment.md final-artifacts/comment.md
+          else
+            echo "<!-- plugin-review -->" > final-artifacts/comment.md
+            echo "❌ **处理过程中出现错误**" >> final-artifacts/comment.md
+            echo "" >> final-artifacts/comment.md
+          fi
+          if [ -f repo-check-artifacts/repo_check_result.json ]; then
+            repo_success=$(uv run python -c "import json; print(json.load(open('repo-check-artifacts/repo_check_result.json'))['success'])" 2>/dev/null || echo "false")
+            # if [ -f repo-check-artifacts/repo_check_comment.md ]; then
+            #   echo "" >> final-artifacts/comment.md
+            #   echo "---" >> final-artifacts/comment.md
+            #   echo "" >> final-artifacts/comment.md
+            #   sed '1s/<!-- plugin-review -->//' repo-check-artifacts/repo_check_comment.md >> final-artifacts/comment.md
+            # fi
+          fi
+
+      - name: Find bot comment
+        id: find-comment
+        uses: peter-evans/find-comment@v3
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          comment-author: "github-actions[bot]"
+          body-includes: "<!-- plugin-review -->"
+
+      - name: Create or update comment
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          comment-id: ${{ steps.find-comment.outputs.comment-id }}
+          issue-number: ${{ github.event.issue.number }}
+          body-path: final-artifacts/comment.md
+          edit-mode: replace
+
+      - name: Update Issue body if revalidate
+        if: needs.metadata-validation.outputs.is_revalidate == 'true'
+        run: |
+          if [ -f validation-artifacts/updated_issue_body.txt ]; then
+            gh issue edit ${{ github.event.issue.number }} --body-file validation-artifacts/updated_issue_body.txt
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Fixes for changes
+        id: pre-commit
+        uses: j178/prek-action@v1
+        if: needs.metadata-validation.outputs.is_commit == 'true' && (needs.metadata-validation.outputs.needs_repo_check == 'false' || needs.repository-check.outputs.repo_check_success == 'True' || needs.repository-check.outputs.repo_check_success == 'true')
+        continue-on-error: true
+
+      - name: Import GPG key
+        id: import-gpg-compile
+        uses: crazy-max/ghaction-import-gpg@v6
+        if: needs.metadata-validation.outputs.is_commit == 'true' && (needs.metadata-validation.outputs.needs_repo_check == 'false' || needs.repository-check.outputs.repo_check_success == 'True' || needs.repository-check.outputs.repo_check_success == 'true')
+        continue-on-error: true
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.GPG_PASSPHRASE }}
+          git_user_signingkey: true
+          git_commit_gpgsign: true
+
+      - name: Commit plugin to registry
+        uses: stefanzweifel/git-auto-commit-action@v7
+        id: commit-file
+        if: needs.metadata-validation.outputs.is_commit == 'true' && (needs.metadata-validation.outputs.needs_repo_check == 'false' || needs.repository-check.outputs.repo_check_success == 'True' || needs.repository-check.outputs.repo_check_success == 'true')
+        continue-on-error: true
+        with:
+          commit_message: |
+            chore: Add plugin from issue #${{ github.event.issue.number }}
+            - 提交触发者: ${{ github.actor }}
+            - 工作流运行: ${{ github.run_id }} (${{ github.event_name }})
+
+            Co-authored-by: "ChimeYao-bot <ChimeYao@outlook.jp>"
+          commit_options: "--no-verify --signoff"
+          file_pattern: "Plugins/plugin_list.json"
+          commit_user_name: "ChimeYao-bot"
+          commit_user_email: "ChimeYao@outlook.jp"
+          commit_author: "${{ github.event.issue.user.login }} <${{ github.event.issue.user.id }}+${{ github.event.issue.user.login }}@users.noreply.github.com>"
+
+      - name: Update comment with commit status
+        if: steps.commit-file.outcome == 'success'
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          comment-id: ${{ steps.find-comment.outputs.comment-id }}
+          issue-number: ${{ github.event.issue.number }}
+          body-path: final-artifacts/comment.md
+          edit-mode: replace
+
+      - name: Close issue after successful commit
+        if: steps.commit-file.outcome == 'success'
+        run: |
+          gh issue close ${{ github.event.issue.number }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Add revalidate checkbox to issue
+        if: needs.metadata-validation.outputs.commit_requested == 'false'
+        run: |
+          current_body=$(gh issue view ${{ github.event.issue.number }} --json body -q .body)
+          if ! echo "$current_body" | grep -q "重新验证"; then
+            echo "$current_body" > temp_body.txt
+            echo "" >> temp_body.txt
+            echo "---" >> temp_body.txt
+            echo "**操作选项:**" >> temp_body.txt
+            echo "- [ ] 重新验证" >> temp_body.txt
+
+            gh issue edit ${{ github.event.issue.number }} --body-file temp_body.txt
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

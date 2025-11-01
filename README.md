@@ -1,42 +1,57 @@
 # 插件广场 (Plugin Plaza)
-存储插件索引、Banner、介绍等信息。
+
+插件的索引仓库
 
 ## 如何使用
+
 > [!TIP]
 > Class Widgets 已有官方教程！
 > 插件开发教程详见[此处](https://cw.rinlit.cn/docs-dev)。
 
-## 发布插件
-> [!Note]
-> 请确保在您的插件的 GitHub 仓库中至少发布了一个 Release（您只需将插件打包成 .zip 压缩包上传），否则插件将无法在 PluginPlaza 中下载。
+### 发布插件到广场
 
-若要发布插件，请按以下步骤操作：
+我们提供了**两种方式**来发布您的插件:
 
-1. Fork 本项目。
-2. 修改 `./Plugins/plugin_list.json` 文件，按照以下格式添加您的插件信息（**注意和插件仓库中的 `plugin.json` 内容是不一样的！请仔细检查格式！**），随后提交PR 等待审核即可。
+#### 🎯 方式一: Issue 模板提交
 
-插件信息格式如下：
-```
+1. 确保您的插件仓库包含有效的 `plugin.json` 文件
+2. 在 GitHub 仓库中发布至少一个 Release
+3. [点击这里创建插件提交 Issue](../../issues/new?assignees=&labels=plugin-add&projects=&template=plugin-add.yml&title=%5BPlugin+Add%5D+%3C%E6%8F%92%E4%BB%B6ID%3E)
+4. 填写插件信息并提交
+
+#### 📝 方式二: PR 提交
+
+1. Fork 本项目
+2. 修改 `./Plugins/plugin_list.json` 文件
+3. 提交 Pull Request
+
+## 📋 插件信息格式
+
+在 `plugin_list.json` 中, 添加插件信息格式如下:
+
+```json
 {
-    "其他插件...": {
-        ...
-    },
-    // 在这里添加您的插件信息
-    "您的插件仓库名称": {
-        "name": "插件在 PluginPlaza 显示的名称",
-        "description": "插件的简介",
-        "version": "插件版本号（如：1.0.0）",
-        "plugin_ver": "插件支持的 Class Widgets 版本号（可在 Class Widgets 的 config.ini 中的 [Plugin] 部分找到该值）",
-        "author": "插件作者的 PluginPlaza 名称",
-    
-        "url": "您的 GitHub 插件仓库链接 (例如：https://github.com/RinLit-233-shiroko/cw-example-plugin)",
-        "branch": "插件仓库的分支（如：main）",
-    
-        "update_date": "插件更新日期（格式：yyyy/mm/dd）",
-    
-        "tag": "插件标签"
-    }
+  "您的插件ID": {
+    "name": "插件显示名称",
+    "description": "插件简介",
+    "version": "1.0.0",
+    "plugin_ver": "支持的 Class Widgets 版本",
+    "author": "作者名称",
+    "url": "https://github.com/username/plugin-repo",  # 插件仓库的 URL
+    "branch": "main",  # 插件仓库的分支
+    "update_date": "2024/01/01",
+    "tag": "实用 | 工具"  # 插件标签,多个标签用` | `分隔
+  }
 }
 ```
 
-后续更新时，您只需修改仓库中的 `plugin.json` 文件，更新版本号（`version`）和更新时间（`update_date`）。本仓库会每半小时自动检测插件更新。（更新脚本只检测版本号及时间的更新 如果有其他更变 请重新提交PR）
+> [!IMPORTANT]
+> **注意**：这里的格式与插件仓库中的 `plugin.json` 不同！请仔细检查格式。
+
+- **更新**：系统每 30 分钟自动检测插件更新, 自动从您的 `plugin.json` 同步版本号和更新时间
+
+<div align="center">
+
+如有问题，请[创建 Issue](../../issues/new) 或查看[官方文档](https://cw.rinlit.cn/docs-dev)
+
+</div>
