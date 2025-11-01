@@ -1,0 +1,73 @@
+name: "Plugin Add"
+description: "提交新增插件请求"
+title: "[Plugin Add] <插件ID>"
+labels:
+  - plugin-add
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢提交新的插件!🎉
+
+        **要求: **
+        - 插件仓库必须包含有效的 `plugin.json` 文件
+        - 插件 ID 不可与现有插件重复
+        - 仓库必须是公开的 GitHub 仓库
+
+  - type: input
+    id: plugin_url
+    attributes:
+      label: 插件仓库 URL
+      description: "插件的 GitHub 仓库地址"
+      placeholder: "https://github.com/username/plugin-name"
+    validations:
+      required: true
+
+  - type: input
+    id: plugin_id
+    attributes:
+      label: 插件 ID
+      description: "插件的唯一标识符, 建议使用小写字母、数字和连字符"
+      placeholder: "cw-awesome-plugin"
+    validations:
+      required: true
+
+  - type: input
+    id: plugin_tag
+    attributes:
+      label: 插件标签
+      description: "插件的分类标签, 使用 ' | ' 分隔多个标签"
+      placeholder: "实用 | 工具"
+    validations:
+      required: true
+
+  - type: input
+    id: plugin_branch
+    attributes:
+      label: 插件分支
+      description: "插件仓库的分支名"
+      placeholder: "main"
+      value: "main"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: 提交确认
+      description: 请勾选以下确认项
+      options:
+        - label: 我确认插件仓库包含有效的 plugin.json 文件
+          required: true
+        - label: 我确认插件 ID 未与现有插件重复
+          required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+
+        **重新验证选项** (仅在需要时使用):
+
+        - [ ] 重新验证
