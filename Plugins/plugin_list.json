@@ -248,12 +248,12 @@
   "cw-voicehub-plugin": {
     "name": "VoiceHub广播站排期",
     "description": "展示广播站当日排期歌曲，按播放顺序显示歌曲信息",
-    "version": "1.0.0",
-    "plugin_ver": "1",
+    "version": "1.1.1",
+    "plugin_ver": 2,
     "author": "LaoShui",
     "url": "https://github.com/laoshuikaixue/cw-voicehub-plugin",
     "branch": "main",
-    "update_date": "2025/8/11",
+    "update_date": "2025/10/12",
     "tag": "实用 | 提醒 | 信息"
   },
   "cw-SecRandom-CW-plugin": {
