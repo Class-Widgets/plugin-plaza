@@ -1,0 +1,14 @@
+{
+
+  "id": "example.plugin.id",
+  "icon": "icon.png",
+  "name": "Example Plugin",
+  "version": "1.0.0",
+  "api_version": "1.0.0",
+  "description": "This is an example plugin.",
+  "author": "Your Name",
+  "url": "https://github.com/Class-Widgets/plugin-template-v2",
+  "branch": "master",
+  "readme": "README.md",
+  "tags": ["tools", "productivity"]
+}
