@@ -16,7 +16,7 @@
 
 1. 确保您的插件仓库包含有效的 plugin.json 文件
 2. 在 GitHub 仓库中发布至少一个 Release
-3. [点击这里创建插件提交 Issue](../../issues/new?assignees=&labels=plugin-add&projects=&template=plugin-add.yml&title=%5BPlugin+Add%5D+%3C%E6%8F%92%E4%BB%B6ID%3E)
+3. [点击这里创建插件提交 Issue](../../issues/new?)
 4. 填写插件信息并提交
 
 ####  方式二: PR 提交
@@ -27,7 +27,7 @@
 
 ##  插件信息格式
 
-### 旧规范插件 (Legacy Plugins)
+### Class Widgets 1 插件 (Legacy Plugins)
 
 在 plugin_list.json 中, 添加插件信息格式如下:
 
@@ -50,7 +50,7 @@
 > [!IMPORTANT]
 > **注意**：这里的格式与插件仓库中的 plugin.json 不同，请仔细检查格式。
 
-### Class Widgets 2 插件 (CW2 Plugins)
+### Class Widgets 2 插件
 
 在 ClassWidgets2/plugins/manifest/ 目录中, 每个插件都有自己的独立JSON文件, 格式如下:
 
