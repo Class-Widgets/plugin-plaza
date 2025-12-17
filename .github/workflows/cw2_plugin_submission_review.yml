@@ -101,7 +101,7 @@ jobs:
   repository-check:
     runs-on: ubuntu-latest
     needs: metadata-validation
-    if: always() && needs.metadata-validation.outputs.needs_repo_check == 'true'
+    if: needs.metadata-validation.outputs.needs_repo_check == 'true'
     outputs:
       repo_check_success: ${{ steps.repo-check.outputs.repo_check_success }}
 
@@ -164,7 +164,7 @@ jobs:
   integration:
     runs-on: ubuntu-latest
     needs: [metadata-validation, repository-check]
-    if: always() && needs.metadata-validation.result != 'failure'
+    if: needs.metadata-validation.result != 'failure'
 
     steps:
       - name: Checkout repository

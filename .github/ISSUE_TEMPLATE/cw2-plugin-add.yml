@@ -3,7 +3,8 @@ name: "新增 Class Widgets 2 插件提交"
 description: "提交一个新的 Class Widgets 2 插件"
 title: "[Class Widgets 2] 新增插件提交: "
 
-labels: ["cw2-plugin-add", "enhancement"]
+labels:
+  - cw2-plugin-add
 
 assignees: []
 
