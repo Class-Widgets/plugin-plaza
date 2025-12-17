@@ -1,0 +1,70 @@
+name: Class Widgets 2 Plugin Metadata Sync
+
+on:
+  schedule:
+    - cron: "0 * * * *"  # 每1小时运行一次
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python & uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          python-version: 3.11
+          activate-environment: true
+
+      - name: Cache Python dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/uv
+            ~\AppData\Local\uv
+          key: ${{ runner.os }}-uv-cw2-cache-${{ hashFiles('uv.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-uv-cw2-cache-
+
+      - name: Install dependencies
+        run: |
+          uv pip install pydantic requests
+
+      - name: Run CW2 updater
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          uv run scripts/update_cw2_plugin_index.py
+
+      - name: Generate plugin index
+        run: |
+          uv run scripts/generate_plugin_index.py ClassWidgets2/plugins/manifest
+
+      - name: Fixes for changes
+        id: pre-commit
+        uses: j178/prek-action@v1
+        continue-on-error: true
+
+      - name: Import GPG key
+        id: import-gpg-compile
+        uses: crazy-max/ghaction-import-gpg@v6
+        continue-on-error: true
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.GPG_PASSPHRASE }}
+          git_user_signingkey: true
+          git_commit_gpgsign: true
+
+      - name: Commit updated CW2 plugin registry
+        uses: stefanzweifel/git-auto-commit-action@v7
+        continue-on-error: true
+        with:
+          commit_message: "chore: sync Class Widgets 2 plugin metadata [skip ci]"
+          commit_options: "--no-verify --signoff"
+          file_pattern: "ClassWidgets2/plugins/"

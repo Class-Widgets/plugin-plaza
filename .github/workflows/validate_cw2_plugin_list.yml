@@ -1,0 +1,58 @@
+name: Validate Class Widgets 2 Plugin Registry
+
+on:
+  schedule:
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python & uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          python-version: 3.11
+          activate-environment: true
+
+      - name: Cache Python dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/uv
+            ~\AppData\Local\uv
+          key: ${{ runner.os }}-uv-cw2-validate-${{ hashFiles('uv.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-uv-cw2-validate-
+
+      - name: Install dependencies
+        run: |
+          uv pip install pydantic requests
+
+      - name: Validate CW2 Registry
+        id: validate-cw2
+        env:
+          ACTION: "REGISTRY_VALIDATE"
+        run: |
+          uv run scripts/cw2_repo_check.py
+
+      - name: Validate Legacy Registry
+        id: validate-legacy
+        env:
+          ACTION: "REGISTRY_VALIDATE"
+        run: |
+          uv run scripts/repo_check.py
+
+      - name: Upload validation results
+        uses: actions/upload-artifact@v4
+        with:
+          name: cw2-validation-results
+          path: artifacts/
+          retention-days: 7

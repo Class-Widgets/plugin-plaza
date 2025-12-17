@@ -1,0 +1,82 @@
+name: "新增 Class Widgets 2 插件提交"
+
+description: "提交一个新的 Class Widgets 2 插件"
+title: "[Class Widgets 2] 新增插件提交: "
+
+labels: ["cw2-plugin-add", "enhancement"]
+
+assignees:
+  - ''
+
+body:
+
+  - type: markdown
+    attributes:
+      value: |
+        感谢您为 Class Widgets 2 插件生态做出贡献！在提交之前，请确保您的插件符合以下要求：
+
+        ## 插件要求
+        - 插件仓库必须是公开的 GitHub 仓库
+        - 仓库根目录必须包含有效的 `cwplugin.json` 文件（即符合 Class Widgets 2 的插件开发规范）
+        - 插件 ID 必须是唯一的
+        - 确保您的插件具有良好的用户体验和稳定性
+
+        ## 提交流程
+        1. 填写下方表单信息
+        2. 提交此 Issue
+        3. 自动验证将在几分钟后开始
+        4. 验证通过后，您需要手动勾选"执行提交"选项来完成最终提交
+
+        ---
+        
+  - type: input
+    id: plugin-id
+    attributes:
+      label: 插件 ID
+      description: "插件的唯一标识符，需使用小写字母、数字、点(.)和连字符(-)"
+      placeholder: "cw-my-awesome-plugin"
+    validations:
+      required: true
+      pattern: "^[a-z0-9][a-z0-9.-]*[a-z0-9]$"
+      message: "插件ID只能包含小写字母、数字、点和连字符，且不能以点或连字符开头/结尾"
+
+  - type: input
+    id: plugin-url
+    attributes:
+      label: 插件仓库 URL
+      description: "远程存储库的完整URL"
+      placeholder: "https://github.com/owner/repo"
+    validations:
+      required: true
+      pattern: "^https://github\.com/[\w.-]+/[\w.-]+/?$"
+      message: "请提供有效的GitHub仓库URL"
+
+  - type: input
+    id: plugin-branch
+    attributes:
+      label: 插件分支
+      description: "插件的主要分支名称（通常是 main 或 master）"
+      placeholder: "main"
+    validations:
+      required: true
+
+  - type: input
+    id: plugin-tags
+    attributes:
+      label: 插件标签
+      description: "请使用英文标签ID，用逗号分隔。可用标签参考：tools, productivity, utility, example, learning, information, reminder, automation, game, entertainment, news, widget, classroom_environment"
+      placeholder: "tools"
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## 验证状态
+        - [ ] 重新验证
+        
+        **操作选项:**
+        - [ ] 执行提交
+
+        ---
+        > 编辑此评论勾选相应选项来触发操作
