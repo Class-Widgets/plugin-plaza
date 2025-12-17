@@ -9,5 +9,5 @@
   "branch": "master",
   "readme": "README.md",
   "icon": "icon.png",
-  "tags": ["example,tools"]
+  "tags": ["example", "tools"]
 }
