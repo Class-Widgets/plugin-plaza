@@ -47,7 +47,7 @@ body:
       placeholder: "https://github.com/owner/repo"
     validations:
       required: true
-      pattern: "^https://github\.com/[\w.-]+/[\w.-]+/?$"
+      pattern: '^https://github\\\\.com/[\\w.-]+/[\\w.-]+/?$'
       message: "请提供有效的GitHub仓库URL"
 
   - type: input
