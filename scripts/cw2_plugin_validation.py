@@ -144,29 +144,29 @@ def validate_submission() -> None:
 
     success, errors, registry_item = validate_submission_metadata(merged_data)
 
-    if success and manifest_item:
+    if success and registry_item:
         validation_result = {
             "success": True,
-            "registry_item": manifest_item.model_dump(),
+            "registry_item": registry_item.model_dump(),
             "plugin_id": form_data["id"],
             "form_data": form_data,
-            "plugin_json": plugin_json,
+            "plugin_json": cwplugin_json,
         }
 
         artifacts_dir = Path("artifacts")
         artifacts_dir.mkdir(exist_ok=True)
         with open(artifacts_dir / "cw2_validation_result.json", "w", encoding="utf-8") as f:
             json.dump(validation_result, f, indent=2, ensure_ascii=False)
-        formatted_json = json.dumps(manifest_item.model_dump(), indent=2, ensure_ascii=False)
+        formatted_json = json.dumps(registry_item.model_dump(), indent=2, ensure_ascii=False)
         comment = f"""<!-- plugin-review -->
 ✅ **Class Widgets 2 验证通过**
 
 **插件信息:**
 - **ID**: `{form_data["id"]}`
-- **名称**: {manifest_item.name}
-- **版本**: {manifest_item.version}
-- **作者**: {manifest_item.author}
-- **描述**: {manifest_item.description or "无"}
+- **名称**: {registry_item.name}
+- **版本**: {registry_item.version}
+- **作者**: {registry_item.author}
+- **描述**: {registry_item.description or "无"}
 
 **完整元数据:**
 ```json
@@ -205,8 +205,18 @@ def main() -> None:
         
         # 设置 GitHub Actions 输出
         github_output = os.getenv("GITHUB_OUTPUT")
-        if Path("artifacts/cw2_validation_result.json").exists():
-            needs_repo_check = "true"
+        result_file = Path("artifacts/cw2_validation_result.json")
+        
+        if result_file.exists():
+            try:
+                with open(result_file, "r", encoding="utf-8") as f:
+                    result_data = json.load(f)
+                    if result_data.get("success", False):
+                        needs_repo_check = "true"
+                    else:
+                        needs_repo_check = "false"
+            except Exception:
+                needs_repo_check = "false"
         else:
             needs_repo_check = "false"
             
