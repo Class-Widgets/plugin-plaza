@@ -9,9 +9,7 @@ on:
 jobs:
   metadata-validation:
     runs-on: ubuntu-latest
-    if: |
-      contains(github.event.issue.labels.*.name, 'cw2-plugin-add') && 
-      !contains(github.event.issue.labels.*.name, 'plugin-add')
+    if: contains(github.event.issue.labels.*.name, 'cw2-plugin-add')
     outputs:
       needs_repo_check: ${{ steps.validate.outputs.needs_repo_check }}
       repo_url: ${{ steps.extract-repo.outputs.repo_url }}
@@ -103,7 +101,7 @@ jobs:
   repository-check:
     runs-on: ubuntu-latest
     needs: metadata-validation
-    if: always() && needs.metadata-validation.result == 'success' && needs.metadata-validation.outputs.needs_repo_check == 'true'
+    if: always() && needs.metadata-validation.outputs.needs_repo_check == 'true'
     outputs:
       repo_check_success: ${{ steps.repo-check.outputs.repo_check_success }}
 
@@ -166,7 +164,7 @@ jobs:
   integration:
     runs-on: ubuntu-latest
     needs: [metadata-validation, repository-check]
-    if: always() && needs.metadata-validation.result == 'success'
+    if: always() && needs.metadata-validation.result != 'failure'
 
     steps:
       - name: Checkout repository
