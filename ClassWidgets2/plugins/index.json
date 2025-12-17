@@ -1,23 +1,40 @@
 {
   "metadata": {
-    "generated_at": "2025-12-17T10:12:43.496322",
+    "generated_at": "2025-12-17T10:41:56.489299",
     "manifest_directory": "/home/runner/work/plugin-plaza/plugin-plaza/ClassWidgets2/plugins/manifest",
-    "total_files_scanned": 2,
+    "total_files_scanned": 3,
     "generator_version": "1.0.0"
   },
   "statistics": {
-    "total_plugins": 2,
+    "total_plugins": 3,
     "total_errors": 0,
-    "unique_authors": ["Your Name"],
+    "unique_authors": ["RinLit", "Your Name"],
     "version_distribution": {
-      "1.0.0": 2
+      "1.0.0": 3
     },
     "tag_distribution": {
       "tools": 2,
-      "productivity": 2
+      "productivity": 2,
+      "example,tools": 1
     }
   },
   "plugins": [
+    {
+      "id": "com.rinlit.test",
+      "name": "Test",
+      "version": "1.0.0",
+      "api_version": ">=0.1.0",
+      "description": "A Class Widgets plugin.",
+      "author": "RinLit",
+      "url": "https://github.com/Class-Widgets/plugin-template-v2/",
+      "branch": "master",
+      "readme": "README.md",
+      "icon": "icon.png",
+      "tags": ["example,tools"],
+      "_file_path": "com.rinlit.test.json",
+      "_file_size": 334,
+      "_modified_time": "2025-12-17T10:41:49.057354"
+    },
     {
       "id": "example.plugin.2",
       "icon": "icon.png",
@@ -32,7 +49,7 @@
       "tags": ["tools", "productivity"],
       "_file_path": "example.plugin.2.json",
       "_file_size": 349,
-      "_modified_time": "2025-12-17T10:12:36.888226"
+      "_modified_time": "2025-12-17T10:41:49.057354"
     },
     {
       "id": "example.plugin.id",
@@ -48,7 +65,7 @@
       "tags": ["tools", "productivity"],
       "_file_path": "example.plugin.id.json",
       "_file_size": 350,
-      "_modified_time": "2025-12-17T10:12:36.888226"
+      "_modified_time": "2025-12-17T10:41:49.057354"
     }
   ],
   "errors": []
