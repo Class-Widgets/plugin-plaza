@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2025-12-17T06:16:35.884880",
+    "generated_at": "2025-12-17T07:14:24.532872",
     "manifest_directory": "/home/runner/work/plugin-plaza/plugin-plaza/ClassWidgets2/plugins/manifest",
     "total_files_scanned": 2,
     "generator_version": "1.0.0"
@@ -32,7 +32,7 @@
       "tags": ["tools", "productivity"],
       "_file_path": "example.plugin.2.json",
       "_file_size": 349,
-      "_modified_time": "2025-12-17T06:16:31.527269"
+      "_modified_time": "2025-12-17T07:14:19.623209"
     },
     {
       "id": "example.plugin.id",
@@ -48,7 +48,7 @@
       "tags": ["tools", "productivity"],
       "_file_path": "example.plugin.id.json",
       "_file_size": 350,
-      "_modified_time": "2025-12-17T06:16:31.527269"
+      "_modified_time": "2025-12-17T07:14:19.624209"
     }
   ],
   "errors": []
