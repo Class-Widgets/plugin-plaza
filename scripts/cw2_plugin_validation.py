@@ -65,6 +65,11 @@ def validate_submission_metadata(data: dict[str, Any]) -> tuple[bool, list[str],
 
     try:
         submission = CW2Submission(**data)
+        # 将逗号分隔的标签字符串拆分为列表
+        tags_list = None
+        if submission.tags:
+            tags_list = [tag.strip() for tag in submission.tags.split(",") if tag.strip()]
+        
         manifest_item = CW2ManifestItem(
             id=submission.id,
             name=submission.name,
@@ -76,7 +81,7 @@ def validate_submission_metadata(data: dict[str, Any]) -> tuple[bool, list[str],
             branch=submission.branch,
             readme=submission.readme,
             icon=submission.icon,
-            tags=[submission.tags] if submission.tags else None,
+            tags=tags_list,
         )
 
         return True, [], manifest_item
