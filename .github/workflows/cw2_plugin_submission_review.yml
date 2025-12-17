@@ -50,8 +50,8 @@ jobs:
           # 从checkboxes字段中获取操作选项
           ISSUE_BODY="${{ github.event.issue.body }}"
           
-          # 检查是否包含重新验证选项（当用户额外勾选时）
-          if echo "$ISSUE_BODY" | grep -q "operation-options.*revalidate"; then
+          # 检查是否勾选了"重新验证"选项
+          if echo "$ISSUE_BODY" | grep -q "operation-options.*- \[x\] 重新验证"; then
             echo "is_revalidate=true" >> $GITHUB_OUTPUT
             echo "is_commit=false" >> $GITHUB_OUTPUT
           else
