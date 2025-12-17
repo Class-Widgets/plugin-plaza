@@ -33,7 +33,7 @@ body:
     attributes:
       label: 插件 ID
       description: "插件的唯一标识符，需使用小写字母、数字、点(.)和连字符(-)"
-      placeholder: "cw-my-awesome-plugin"
+      placeholder: "com.example.plugin"
     validations:
       required: true
       pattern: "^[a-z0-9][a-z0-9.-]*[a-z0-9]$"
@@ -71,11 +71,8 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## 验证状态
-        - [ ] 重新验证
-        
-        **操作选项:**
-        - [ ] 执行提交
-
         ---
-        > 编辑此评论勾选相应选项来触发操作
+
+        **重新验证选项** (仅在需要时使用):
+
+        - [ ] 重新验证
