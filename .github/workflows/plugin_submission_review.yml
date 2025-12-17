@@ -47,17 +47,16 @@ jobs:
       - name: Determine action type
         id: action
         run: |
-          # 检查是否为执行提交操作
-          if [[ "${{ github.event.comment.body }}" == *"[x] 执行提交"* ]] || [[ "${{ github.event.issue.body }}" == *"- [x] 执行提交"* ]]; then
-            echo "is_commit=true" >> $GITHUB_OUTPUT
-          else
-            echo "is_commit=false" >> $GITHUB_OUTPUT
-          fi
+          # 从checkboxes字段中获取操作选项
+          ISSUE_BODY="${{ github.event.issue.body }}"
           
-          # 检查是否为重新验证操作
-          if [[ "${{ github.event.comment.body }}" == *"[x] 重新验证"* ]] || [[ "${{ github.event.issue.body }}" == *"- [x] 重新验证"* ]]; then
+          # 检查是否包含重新验证选项（当用户额外勾选时）
+          if echo "$ISSUE_BODY" | grep -q "operation-options.*revalidate"; then
             echo "is_revalidate=true" >> $GITHUB_OUTPUT
+            echo "is_commit=false" >> $GITHUB_OUTPUT
           else
+            # 默认执行提交（没有勾选重新验证时）
+            echo "is_commit=true" >> $GITHUB_OUTPUT
             echo "is_revalidate=false" >> $GITHUB_OUTPUT
           fi
 

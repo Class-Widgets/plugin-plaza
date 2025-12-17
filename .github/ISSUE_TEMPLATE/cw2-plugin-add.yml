@@ -68,11 +68,14 @@ body:
     validations:
       required: true
 
-  - type: markdown
+  - type: checkboxes
+    id: operation-options
     attributes:
-      value: |
-        ---
-
-        **操作选项:**
-        - [ ] 执行提交
-        - [ ] 重新验证
+      label: 操作选项
+      description: "默认执行提交，如需重新验证请勾选相应选项"
+      options:
+        - label: "执行提交 (默认)"
+          value: "execute"
+          checked: true
+        - label: "重新验证"
+          value: "revalidate"
