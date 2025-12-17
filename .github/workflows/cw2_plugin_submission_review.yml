@@ -73,7 +73,7 @@ jobs:
       - name: Check commit flag
         id: check-commit
         run: |
-          if [ -f artifacts/cw2_commit.flag ]; then
+          if [ -f artifacts/commit.flag ]; then
             echo "commit_requested=true" >> $GITHUB_OUTPUT
           else
             echo "commit_requested=false" >> $GITHUB_OUTPUT
@@ -206,6 +206,45 @@ jobs:
           path: repo-check-artifacts/
         continue-on-error: true
 
+      - name: Create manifest files and prepare for commit
+        if: needs.metadata-validation.outputs.commit_requested == 'true'
+        run: |
+          # 从验证结果中读取数据
+          if [ -f validation-artifacts/cw2_validation_result.json ]; then
+            # 使用 Python 正确处理 JSON 数据
+            uv run python -c "
+            import json
+            import sys
+            
+            with open('validation-artifacts/cw2_validation_result.json', 'r', encoding='utf-8') as f:
+                validation_data = json.load(f)
+            
+            plugin_id = validation_data['plugin_id']
+            registry_data = validation_data['registry_item']
+            
+            # 创建 manifest 目录
+            import os
+            os.makedirs('ClassWidgets2/plugins/manifest', exist_ok=True)
+            
+            # 创建 manifest 文件
+            with open(f'ClassWidgets2/plugins/manifest/{plugin_id}.json', 'w', encoding='utf-8') as f:
+                json.dump(registry_data, f, indent=2, ensure_ascii=False)
+            
+            # 创建提交标志文件
+            with open('artifacts/commit.flag', 'w') as f:
+                f.write('true')
+            
+            # 创建插件添加信息文件
+            with open('artifacts/cw2_plugin_to_add.json', 'w', encoding='utf-8') as f:
+                json.dump({plugin_id: registry_data}, f, indent=2, ensure_ascii=False)
+            
+            print(f'✅ Created manifest file for plugin: {plugin_id}')
+            "
+          else
+            echo "❌ Validation result file not found"
+            exit 1
+          fi
+
       - name: Combine results and prepare final comment
         run: |
           mkdir -p final-artifacts
@@ -248,13 +287,13 @@ jobs:
       - name: Fixes for changes
         id: pre-commit
         uses: j178/prek-action@v1
-        if: needs.metadata-validation.outputs.is_commit == 'true'
+        if: needs.metadata-validation.outputs.commit_requested == 'true'
         continue-on-error: true
 
       - name: Import GPG key
         id: import-gpg-compile
         uses: crazy-max/ghaction-import-gpg@v6
-        if: needs.metadata-validation.outputs.is_commit == 'true'
+        if: needs.metadata-validation.outputs.commit_requested == 'true'
         continue-on-error: true
         with:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
@@ -265,13 +304,15 @@ jobs:
       - name: Commit CW2 plugin to registry
         uses: stefanzweifel/git-auto-commit-action@v7
         id: commit-file
-        if: needs.metadata-validation.outputs.is_commit == 'true'
+        if: needs.metadata-validation.outputs.commit_requested == 'true'
         continue-on-error: true
         with:
           commit_message: |
             chore: Add Class Widgets 2 plugin from issue #${{ github.event.issue.number }}
             - 提交触发者: ${{ github.actor }}
             - 工作流运行: ${{ github.run_id }} (${{ github.event_name }})
+
+            Co-authored-by: "ChimeYao-bot <ChimeYao@outlook.jp>"
 
           commit_options: "--no-verify --signoff"
           file_pattern: "ClassWidgets2/plugins/manifest/"
