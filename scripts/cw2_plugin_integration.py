@@ -49,6 +49,18 @@ def create_manifest_files():
         print(f"✅ Created manifest file for plugin: {plugin_id}")
         print(f"✅ Created commit flag and plugin add information")
         
+        # 生成更新后的索引
+        print("🔄 Generating updated plugin index...")
+        import subprocess
+        result = subprocess.run(
+            [sys.executable, "scripts/generate_plugin_index.py", "ClassWidgets2/plugins/manifest"],
+            capture_output=True, text=True
+        )
+        if result.returncode == 0:
+            print("✅ Plugin index generated successfully")
+        else:
+            print(f"⚠️ Index generation failed: {result.stderr}")
+        
     except json.JSONDecodeError:
         print("❌ Invalid JSON format in validation result", file=sys.stderr)
         sys.exit(1)

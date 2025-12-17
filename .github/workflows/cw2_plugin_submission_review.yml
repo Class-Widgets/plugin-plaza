@@ -266,6 +266,10 @@ jobs:
           git_user_signingkey: true
           git_commit_gpgsign: true
 
+      - name: Generate plugin index
+        if: needs.metadata-validation.outputs.commit_requested == 'true'
+        run: uv run python scripts/generate_plugin_index.py ClassWidgets2/plugins/manifest
+
       - name: Commit CW2 plugin to registry
         uses: stefanzweifel/git-auto-commit-action@v7
         id: commit-file
@@ -280,7 +284,7 @@ jobs:
             Co-authored-by: "ChimeYao-bot <ChimeYao@outlook.jp>"
 
           commit_options: "--no-verify --signoff"
-          file_pattern: "ClassWidgets2/plugins/manifest/"
+          file_pattern: "ClassWidgets2/plugins/"
 
       - name: Update comment with commit status
         if: steps.commit-file.outcome == 'success'
