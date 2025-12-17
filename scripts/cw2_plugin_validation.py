@@ -157,6 +157,10 @@ def validate_submission() -> None:
         artifacts_dir.mkdir(exist_ok=True)
         with open(artifacts_dir / "cw2_validation_result.json", "w", encoding="utf-8") as f:
             json.dump(validation_result, f, indent=2, ensure_ascii=False)
+        
+        # 创建提交标志文件
+        with open(artifacts_dir / "commit.flag", "w") as f:
+            f.write("true")
         formatted_json = json.dumps(registry_item.model_dump(), indent=2, ensure_ascii=False)
         comment = f"""<!-- plugin-review -->
 ✅ **Class Widgets 2 验证通过**
