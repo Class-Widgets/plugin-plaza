@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2025-12-17T13:27:13.976291",
+    "generated_at": "2025-12-17T14:12:09.923873",
     "manifest_directory": "/home/runner/work/plugin-plaza/plugin-plaza/ClassWidgets2/plugins/manifest",
     "total_files_scanned": 3,
     "generator_version": "1.0.0"
@@ -33,7 +33,7 @@
       "tags": ["example", "tools"],
       "_file_path": "com.rinlit.test.json",
       "_file_size": 330,
-      "_modified_time": "2025-12-17T13:27:09.498423"
+      "_modified_time": "2025-12-17T14:12:04.195133"
     },
     {
       "id": "example.plugin.2",
@@ -49,7 +49,7 @@
       "tags": ["tools", "productivity"],
       "_file_path": "example.plugin.2.json",
       "_file_size": 349,
-      "_modified_time": "2025-12-17T13:27:09.498423"
+      "_modified_time": "2025-12-17T14:12:04.195133"
     },
     {
       "id": "example.plugin.id",
@@ -65,7 +65,7 @@
       "tags": ["tools", "productivity"],
       "_file_path": "example.plugin.id.json",
       "_file_size": 350,
-      "_modified_time": "2025-12-17T13:27:09.498423"
+      "_modified_time": "2025-12-17T14:12:04.195133"
     }
   ],
   "errors": []
