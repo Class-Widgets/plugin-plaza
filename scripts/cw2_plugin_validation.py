@@ -205,17 +205,16 @@ def main() -> None:
         
         # 设置 GitHub Actions 输出
         github_output = os.getenv("GITHUB_OUTPUT")
+        if Path("artifacts/cw2_validation_result.json").exists():
+            needs_repo_check = "true"
+        else:
+            needs_repo_check = "false"
+            
         if github_output:
             with open(github_output, "a", encoding="utf-8") as f:
-                if Path("artifacts/cw2_validation_result.json").exists():
-                    f.write("needs_repo_check=true\n")
-                else:
-                    f.write("needs_repo_check=false\n")
+                f.write(f"needs_repo_check={needs_repo_check}\n")
         else:
-            if Path("artifacts/cw2_validation_result.json").exists():
-                print("::set-output name=needs_repo_check::true")
-            else:
-                print("::set-output name=needs_repo_check::false")
+            print(f"::set-output name=needs_repo_check::{needs_repo_check}")
                 
     except SystemExit:
         github_output = os.getenv("GITHUB_OUTPUT")

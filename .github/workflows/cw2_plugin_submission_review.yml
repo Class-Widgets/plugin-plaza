@@ -163,7 +163,7 @@ jobs:
 
   integration:
     runs-on: ubuntu-latest
-    needs: [metadata-validation, repository-check]
+    needs: metadata-validation
     if: needs.metadata-validation.result != 'failure'
 
     steps:
@@ -248,13 +248,13 @@ jobs:
       - name: Fixes for changes
         id: pre-commit
         uses: j178/prek-action@v1
-        if: needs.metadata-validation.outputs.is_commit == 'true' && (needs.metadata-validation.outputs.needs_repo_check == 'false' || needs.repository-check.outputs.repo_check_success == 'True' || needs.repository-check.outputs.repo_check_success == 'true')
+        if: needs.metadata-validation.outputs.is_commit == 'true'
         continue-on-error: true
 
       - name: Import GPG key
         id: import-gpg-compile
         uses: crazy-max/ghaction-import-gpg@v6
-        if: needs.metadata-validation.outputs.is_commit == 'true' && (needs.metadata-validation.outputs.needs_repo_check == 'false' || needs.repository-check.outputs.repo_check_success == 'True' || needs.repository-check.outputs.repo_check_success == 'true')
+        if: needs.metadata-validation.outputs.is_commit == 'true'
         continue-on-error: true
         with:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
@@ -265,7 +265,7 @@ jobs:
       - name: Commit CW2 plugin to registry
         uses: stefanzweifel/git-auto-commit-action@v7
         id: commit-file
-        if: needs.metadata-validation.outputs.is_commit == 'true' && (needs.metadata-validation.outputs.needs_repo_check == 'false' || needs.repository-check.outputs.repo_check_success == 'True' || needs.repository-check.outputs.repo_check_success == 'true')
+        if: needs.metadata-validation.outputs.is_commit == 'true'
         continue-on-error: true
         with:
           commit_message: |
