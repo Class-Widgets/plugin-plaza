@@ -1,16 +1,14 @@
 {
   "metadata": {
-    "generated_at": "2025-12-17T13:16:06.456507",
-    "manifest_directory": "C:\\Users\\lintu\\PycharmProjects\\plugin-plaza\\ClassWidgets2\\plugins\\manifest",
+    "generated_at": "2025-12-17T06:16:35.884880",
+    "manifest_directory": "/home/runner/work/plugin-plaza/plugin-plaza/ClassWidgets2/plugins/manifest",
     "total_files_scanned": 2,
     "generator_version": "1.0.0"
   },
   "statistics": {
     "total_plugins": 2,
     "total_errors": 0,
-    "unique_authors": [
-      "Your Name"
-    ],
+    "unique_authors": ["Your Name"],
     "version_distribution": {
       "1.0.0": 2
     },
@@ -31,13 +29,10 @@
       "url": "https://github.com/Class-Widgets/plugin-template-v2",
       "branch": "master",
       "readme": "README.md",
-      "tags": [
-        "tools",
-        "productivity"
-      ],
+      "tags": ["tools", "productivity"],
       "_file_path": "example.plugin.2.json",
       "_file_size": 349,
-      "_modified_time": "2025-12-17T01:31:22.706861"
+      "_modified_time": "2025-12-17T06:16:31.527269"
     },
     {
       "id": "example.plugin.id",
@@ -50,13 +45,10 @@
       "url": "https://github.com/Class-Widgets/plugin-template-v2",
       "branch": "master",
       "readme": "README.md",
-      "tags": [
-        "tools",
-        "productivity"
-      ],
+      "tags": ["tools", "productivity"],
       "_file_path": "example.plugin.id.json",
       "_file_size": 350,
-      "_modified_time": "2025-12-12T18:47:13.644265"
+      "_modified_time": "2025-12-17T06:16:31.527269"
     }
   ],
   "errors": []
