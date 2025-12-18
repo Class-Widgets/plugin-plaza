@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2025-12-18T12:20:10.708797",
+    "generated_at": "2025-12-18T13:29:38.432759",
     "manifest_directory": "/home/runner/work/plugin-plaza/plugin-plaza/ClassWidgets2/plugins/manifest",
     "total_files_scanned": 1,
     "generator_version": "1.0.0"
@@ -32,7 +32,7 @@
       "tags": ["example", "tools"],
       "_file_path": "com.rinlit.test.json",
       "_file_size": 330,
-      "_modified_time": "2025-12-18T12:20:06.294929"
+      "_modified_time": "2025-12-18T13:29:32.862847"
     }
   ],
   "errors": []
