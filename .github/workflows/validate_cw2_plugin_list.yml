@@ -16,35 +16,32 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Python & uv
-        uses: astral-sh/setup-uv@v7
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: 3.11
-          activate-environment: true
 
       - name: Cache Python dependencies
         uses: actions/cache@v4
         with:
-          path: |
-            ~/.cache/uv
-            ~\AppData\Local\uv
-          key: ${{ runner.os }}-uv-cw2-validate-${{ hashFiles('uv.lock') }}
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-cw2-validate-${{ hashFiles('pyproject.toml') }}
           restore-keys: |
-            ${{ runner.os }}-uv-cw2-validate-
+            ${{ runner.os }}-pip-cw2-validate-
 
       - name: Install dependencies
         run: |
-          uv pip install pydantic requests
+          pip install pydantic requests
 
       - name: Validate CW2 Registry
         id: validate-cw2
         run: |
-          uv run scripts/cw2_registry_validate.py
+          python scripts/cw2_registry_validate.py
 
       - name: Validate Legacy Registry
         id: validate-legacy
         run: |
-          uv run scripts/legacy_registry_validate.py
+          python scripts/legacy_registry_validate.py
 
       - name: Upload validation results
         uses: actions/upload-artifact@v4

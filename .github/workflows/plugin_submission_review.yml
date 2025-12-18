@@ -24,25 +24,22 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Setup Python & uv
-        uses: astral-sh/setup-uv@v7
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: 3.11
-          activate-environment: true
 
       - name: Cache Python dependencies
         uses: actions/cache@v4
         with:
-          path: |
-            ~/.cache/uv
-            ~\AppData\Local\uv
-          key: ${{ runner.os }}-uv-cache-${{ hashFiles('uv.lock') }}
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-cache-${{ hashFiles('pyproject.toml') }}
           restore-keys: |
-            ${{ runner.os }}-uv-cache-
+            ${{ runner.os }}-pip-cache-
 
       - name: Install dependencies
         run: |
-          uv pip install pydantic requests
+          pip install pydantic requests
 
       - name: Determine action type
         id: action
@@ -67,7 +64,7 @@ jobs:
           COMMENT_BODY: ${{ github.event.comment.body }}
           IS_COMMIT: ${{ steps.action.outputs.is_commit }}
           IS_REVALIDATE: ${{ steps.action.outputs.is_revalidate }}
-        run: uv run scripts/plugin_validation.py
+        run: python scripts/plugin_validation.py
 
       - name: Check commit flag
         id: check-commit
@@ -83,8 +80,8 @@ jobs:
         if: steps.validate.outputs.needs_repo_check == 'true'
         run: |
           if [ -f artifacts/validation_result.json ]; then
-            repo_url=$(uv run python -c "import json; data=json.load(open('artifacts/validation_result.json')); print(data['registry_item']['url'])")
-            repo_branch=$(uv run python -c "import json; data=json.load(open('artifacts/validation_result.json')); print(data['registry_item']['branch'])")
+            repo_url=$(python -c "import json; data=json.load(open('artifacts/validation_result.json')); print(data['registry_item']['url'])")
+            repo_branch=$(python -c "import json; data=json.load(open('artifacts/validation_result.json')); print(data['registry_item']['branch'])")
             repo_path=$(echo "$repo_url" | sed 's|https://github.com/||' | sed 's|/$||')
             echo "repo_url=$repo_path" >> $GITHUB_OUTPUT
             echo "repo_branch=$repo_branch" >> $GITHUB_OUTPUT
@@ -110,25 +107,22 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Setup Python & uv
-        uses: astral-sh/setup-uv@v7
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: 3.11
-          activate-environment: true
 
       - name: Cache Python dependencies
         uses: actions/cache@v4
         with:
-          path: |
-            ~/.cache/uv
-            ~\AppData\Local\uv
-          key: ${{ runner.os }}-uv-cache-${{ hashFiles('uv.lock') }}
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-cache-${{ hashFiles('pyproject.toml') }}
           restore-keys: |
-            ${{ runner.os }}-uv-cache-
+            ${{ runner.os }}-pip-cache-
 
       - name: Install dependencies
         run: |
-          uv pip install pydantic requests
+          pip install pydantic requests
 
       - name: Checkout plugin repository
         uses: actions/checkout@v4
@@ -144,9 +138,9 @@ jobs:
         env:
           REPO_DIR: plugin-repo
         run: |
-          uv run scripts/repo_check.py
+          python scripts/repo_check.py
           if [ -f artifacts/repo_check_result.json ]; then
-            repo_success=$(uv run python -c "import json; print(json.load(open('artifacts/repo_check_result.json'))['success'])")
+            repo_success=$(python -c "import json; print(json.load(open('artifacts/repo_check_result.json'))['success'])")
             echo "repo_check_success=$repo_success" >> $GITHUB_OUTPUT
           else
             echo "repo_check_success=false" >> $GITHUB_OUTPUT
@@ -170,25 +164,22 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Setup Python & uv
-        uses: astral-sh/setup-uv@v7
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: 3.11
-          activate-environment: true
 
       - name: Cache Python dependencies
         uses: actions/cache@v4
         with:
-          path: |
-            ~/.cache/uv
-            ~\AppData\Local\uv
-          key: ${{ runner.os }}-uv-cache-${{ hashFiles('uv.lock') }}
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-cache-${{ hashFiles('pyproject.toml') }}
           restore-keys: |
-            ${{ runner.os }}-uv-cache-
+            ${{ runner.os }}-pip-cache-
 
       - name: Install dependencies
         run: |
-          uv pip install pydantic requests
+          pip install pydantic requests
 
       - name: Download validation artifacts
         uses: actions/download-artifact@v4
@@ -215,7 +206,7 @@ jobs:
             echo "" >> final-artifacts/comment.md
           fi
           if [ -f repo-check-artifacts/repo_check_result.json ]; then
-            repo_success=$(uv run python -c "import json; print(json.load(open('repo-check-artifacts/repo_check_result.json'))['success'])" 2>/dev/null || echo "false")
+            repo_success=$(python -c "import json; print(json.load(open('repo-check-artifacts/repo_check_result.json'))['success'])") 2>/dev/null || echo "false")
             # if [ -f repo-check-artifacts/repo_check_comment.md ]; then
             #   echo "" >> final-artifacts/comment.md
             #   echo "---" >> final-artifacts/comment.md

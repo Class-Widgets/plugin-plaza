@@ -16,35 +16,32 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Python & uv
-        uses: astral-sh/setup-uv@v7
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: 3.11
-          activate-environment: true
 
       - name: Cache Python dependencies
         uses: actions/cache@v4
         with:
-          path: |
-            ~/.cache/uv
-            ~\AppData\Local\uv
-          key: ${{ runner.os }}-uv-cw2-cache-${{ hashFiles('uv.lock') }}
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-cw2-cache-${{ hashFiles('pyproject.toml') }}
           restore-keys: |
-            ${{ runner.os }}-uv-cw2-cache-
+            ${{ runner.os }}-pip-cw2-cache-
 
       - name: Install dependencies
         run: |
-          uv pip install pydantic requests
+          pip install pydantic requests
 
       - name: Run CW2 updater
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          uv run scripts/update_cw2_plugin_index.py
+          python scripts/update_cw2_plugin_index.py
 
       - name: Generate plugin index
         run: |
-          uv run scripts/generate_plugin_index.py ClassWidgets2/plugins/manifest
+          python scripts/generate_plugin_index.py ClassWidgets2/plugins/manifest
 
       - name: Fixes for changes
         id: pre-commit

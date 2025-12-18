@@ -16,31 +16,28 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Python & uv
-        uses: astral-sh/setup-uv@v7
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: 3.11
-          activate-environment: true
 
       - name: Cache Python dependencies
         uses: actions/cache@v4
         with:
-          path: |
-            ~/.cache/uv
-            ~\AppData\Local\uv
-          key: ${{ runner.os }}-uv-cache-${{ hashFiles('uv.lock') }}
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-cache-${{ hashFiles('pyproject.toml') }}
           restore-keys: |
-            ${{ runner.os }}-uv-cache-
+            ${{ runner.os }}-pip-cache-
 
       - name: Install dependencies
         run: |
-          uv pip install pydantic requests
+          pip install pydantic requests
 
       - name: Run updater
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          uv run scripts/update_plugin_list.py
+          python scripts/update_plugin_list.py
 
       - name: Fixes for changes
         id: pre-commit

@@ -24,31 +24,28 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Python & uv
-        uses: astral-sh/setup-uv@v7
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: 3.11
-          activate-environment: true
 
       - name: Cache Python dependencies
         uses: actions/cache@v4
         with:
-          path: |
-            ~/.cache/uv
-            ~\AppData\Local\uv
-          key: ${{ runner.os }}-uv-cache-${{ hashFiles('uv.lock') }}
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-cache-${{ hashFiles('pyproject.toml') }}
           restore-keys: |
-            ${{ runner.os }}-uv-cache-
+            ${{ runner.os }}-pip-cache-
 
       - name: Install dependencies
         run: |
-          uv pip install pydantic requests
+          pip install pydantic requests
 
       - name: Run Registry Validation
         env:
           ACTION: REGISTRY_VALIDATE
         run: |
-          uv run scripts/plugin_validation.py
+          python scripts/plugin_validation.py
 
       - name: Comment validation summary (PR only)
         if: github.event_name == 'pull_request'

@@ -24,25 +24,22 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Setup Python & uv
-        uses: astral-sh/setup-uv@v7
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: 3.11
-          activate-environment: true
 
       - name: Cache Python dependencies
         uses: actions/cache@v4
         with:
-          path: |
-            ~/.cache/uv
-            ~\AppData\Local\uv
-          key: ${{ runner.os }}-uv-cw2-cache-${{ hashFiles('uv.lock') }}
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-cw2-cache-${{ hashFiles('pyproject.toml') }}
           restore-keys: |
-            ${{ runner.os }}-uv-cw2-cache-
+            ${{ runner.os }}-pip-cw2-cache-
 
       - name: Install dependencies
         run: |
-          uv pip install pydantic requests
+          pip install pydantic requests
 
       - name: Determine action type
         id: action
@@ -68,7 +65,7 @@ jobs:
           IS_COMMIT: ${{ steps.action.outputs.is_commit }}
           IS_REVALIDATE: ${{ steps.action.outputs.is_revalidate }}
           PLATFORM: "cw2"
-        run: uv run scripts/cw2_plugin_validation.py
+        run: python scripts/cw2_plugin_validation.py
 
       - name: Check commit flag
         id: check-commit
@@ -84,8 +81,8 @@ jobs:
         if: steps.validate.outputs.needs_repo_check == 'true'
         run: |
           if [ -f artifacts/cw2_validation_result.json ]; then
-            repo_url=$(uv run python -c "import json; data=json.load(open('artifacts/cw2_validation_result.json')); print(data['registry_item']['url'])")
-            repo_branch=$(uv run python -c "import json; data=json.load(open('artifacts/cw2_validation_result.json')); print(data['registry_item']['branch'])")
+            repo_url=$(python -c "import json; data=json.load(open('artifacts/cw2_validation_result.json')); print(data['registry_item']['url'])")
+            repo_branch=$(python -c "import json; data=json.load(open('artifacts/cw2_validation_result.json')); print(data['registry_item']['branch'])")
             repo_path=$(echo "$repo_url" | sed 's|https://github.com/||' | sed 's|/$||')
             echo "repo_url=$repo_path" >> $GITHUB_OUTPUT
             echo "repo_branch=$repo_branch" >> $GITHUB_OUTPUT
@@ -111,25 +108,22 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Setup Python & uv
-        uses: astral-sh/setup-uv@v7
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: 3.11
-          activate-environment: true
 
       - name: Cache Python dependencies
         uses: actions/cache@v4
         with:
-          path: |
-            ~/.cache/uv
-            ~\AppData\Local\uv
-          key: ${{ runner.os }}-uv-cw2-cache-${{ hashFiles('uv.lock') }}
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-cw2-cache-${{ hashFiles('pyproject.toml') }}
           restore-keys: |
-            ${{ runner.os }}-uv-cw2-cache-
+            ${{ runner.os }}-pip-cw2-cache-
 
       - name: Install dependencies
         run: |
-          uv pip install pydantic requests
+          pip install pydantic requests
 
       - name: Checkout plugin repository
         uses: actions/checkout@v4
@@ -146,9 +140,9 @@ jobs:
           REPO_DIR: plugin-repo
           PLATFORM: "cw2"
         run: |
-          uv run scripts/cw2_repo_check.py
+          python scripts/cw2_repo_check.py
           if [ -f artifacts/cw2_repo_check_result.json ]; then
-            repo_success=$(uv run python -c "import json; print(json.load(open('artifacts/cw2_repo_check_result.json'))['success'])")
+            repo_success=$(python -c "import json; print(json.load(open('artifacts/cw2_repo_check_result.json'))['success'])")
             echo "repo_check_success=$repo_success" >> $GITHUB_OUTPUT
           else
             echo "repo_check_success=false" >> $GITHUB_OUTPUT
@@ -172,25 +166,22 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Setup Python & uv
-        uses: astral-sh/setup-uv@v7
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: 3.11
-          activate-environment: true
 
       - name: Cache Python dependencies
         uses: actions/cache@v4
         with:
-          path: |
-            ~/.cache/uv
-            ~\AppData\Local\uv
-          key: ${{ runner.os }}-uv-cw2-cache-${{ hashFiles('uv.lock') }}
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-cw2-cache-${{ hashFiles('pyproject.toml') }}
           restore-keys: |
-            ${{ runner.os }}-uv-cw2-cache-
+            ${{ runner.os }}-pip-cw2-cache-
 
       - name: Install dependencies
         run: |
-          uv pip install pydantic requests
+          pip install pydantic requests
 
       - name: Download validation artifacts
         uses: actions/download-artifact@v4
@@ -208,7 +199,7 @@ jobs:
 
       - name: Create manifest files and prepare for commit
         if: needs.metadata-validation.outputs.commit_requested == 'true'
-        run: uv run python scripts/cw2_plugin_integration.py
+        run: python scripts/cw2_plugin_integration.py
 
       - name: Combine results and prepare final comment
         run: |
@@ -221,7 +212,7 @@ jobs:
             echo "" >> final-artifacts/cw2_comment.md
           fi
           if [ -f repo-check-artifacts/cw2_repo_check_result.json ]; then
-            repo_success=$(uv run python -c "import json; print(json.load(open('repo-check-artifacts/cw2_repo_check_result.json'))['success'])" 2>/dev/null || echo "false")
+            repo_success=$(python -c "import json; print(json.load(open('repo-check-artifacts/cw2_repo_check_result.json'))['success'])") 2>/dev/null || echo "false")
           fi
 
       - name: Find bot comment
@@ -268,7 +259,7 @@ jobs:
 
       - name: Generate plugin index
         if: needs.metadata-validation.outputs.commit_requested == 'true'
-        run: uv run python scripts/generate_plugin_index.py ClassWidgets2/plugins/manifest
+        run: python scripts/generate_plugin_index.py ClassWidgets2/plugins/manifest
 
       - name: Commit CW2 plugin to registry
         uses: stefanzweifel/git-auto-commit-action@v7
