@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from pydantic import BaseModel, Field, RootModel, field_validator, model_validator
 
 GITHUB_URL_RE = r"^https://github.com/[\w.-]+/[\w.-]+/?$"
