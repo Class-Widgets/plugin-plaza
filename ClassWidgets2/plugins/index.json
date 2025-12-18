@@ -1,21 +1,20 @@
 {
   "metadata": {
-    "generated_at": "2025-12-18T07:14:15.562097",
+    "generated_at": "2025-12-18T08:15:25.228331",
     "manifest_directory": "/home/runner/work/plugin-plaza/plugin-plaza/ClassWidgets2/plugins/manifest",
-    "total_files_scanned": 3,
+    "total_files_scanned": 1,
     "generator_version": "1.0.0"
   },
   "statistics": {
-    "total_plugins": 3,
+    "total_plugins": 1,
     "total_errors": 0,
-    "unique_authors": ["RinLit", "Your Name"],
+    "unique_authors": ["RinLit"],
     "version_distribution": {
-      "1.0.0": 3
+      "1.0.0": 1
     },
     "tag_distribution": {
-      "tools": 3,
-      "productivity": 2,
-      "example": 1
+      "example": 1,
+      "tools": 1
     }
   },
   "plugins": [
@@ -33,39 +32,7 @@
       "tags": ["example", "tools"],
       "_file_path": "com.rinlit.test.json",
       "_file_size": 330,
-      "_modified_time": "2025-12-18T07:14:08.954399"
-    },
-    {
-      "id": "example.plugin.2",
-      "icon": "icon.png",
-      "name": "Example Plugin",
-      "version": "1.0.0",
-      "api_version": "1.0.0",
-      "description": "This is an example plugin.",
-      "author": "Your Name",
-      "url": "https://github.com/Class-Widgets/plugin-template-v2",
-      "branch": "master",
-      "readme": "README.md",
-      "tags": ["tools", "productivity"],
-      "_file_path": "example.plugin.2.json",
-      "_file_size": 349,
-      "_modified_time": "2025-12-18T07:14:08.954399"
-    },
-    {
-      "id": "example.plugin.id",
-      "icon": "icon.png",
-      "name": "Example Plugin",
-      "version": "1.0.0",
-      "api_version": "1.0.0",
-      "description": "This is an example plugin.",
-      "author": "Your Name",
-      "url": "https://github.com/Class-Widgets/plugin-template-v2",
-      "branch": "master",
-      "readme": "README.md",
-      "tags": ["tools", "productivity"],
-      "_file_path": "example.plugin.id.json",
-      "_file_size": 350,
-      "_modified_time": "2025-12-18T07:14:08.954399"
+      "_modified_time": "2025-12-18T08:15:20.875228"
     }
   ],
   "errors": []
