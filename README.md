@@ -31,7 +31,7 @@
 
 在 plugin_list.json 中, 添加插件信息格式如下:
 
-`json
+```json
 {
   "您的插件ID": {
     "name": "插件显示名称",
@@ -45,7 +45,7 @@
     "tag": "实用 | 工具"  # 插件标签,多个标签用\ | \分"
   }
 }
-`
+```
 
 > [!IMPORTANT]
 > **注意**：这里的格式与插件仓库中的 plugin.json 不同，请仔细检查格式。
@@ -54,7 +54,7 @@
 
 在 ClassWidgets2/plugins/manifest/ 目录中, 每个插件都有自己的独立JSON文件, 格式如下:
 
-`json
+```json
 {
   "id": "您的插件ID",
   "name": "插件显示名称",
@@ -68,7 +68,7 @@
   "icon": "icon.png",  # 插件图标路径
   "tags": ["实用", "工具"]  # 插件标签数组
 }
-`
+```
 
 > [!IMPORTANT]
 > **注意**：对于 Class Widgets 2 插件，JSON 格式与插件仓库中的 plugin.json 保持一致，两套规范完全独立运行。
