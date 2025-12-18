@@ -38,17 +38,13 @@ jobs:
 
       - name: Validate CW2 Registry
         id: validate-cw2
-        env:
-          ACTION: "REGISTRY_VALIDATE"
         run: |
-          uv run scripts/cw2_repo_check.py
+          uv run scripts/cw2_registry_validate.py
 
       - name: Validate Legacy Registry
         id: validate-legacy
-        env:
-          ACTION: "REGISTRY_VALIDATE"
         run: |
-          uv run scripts/repo_check.py
+          uv run scripts/legacy_registry_validate.py
 
       - name: Upload validation results
         uses: actions/upload-artifact@v4
