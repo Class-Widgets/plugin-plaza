@@ -2,7 +2,7 @@ name: Class Widgets 2 Plugin Metadata Sync
 
 on:
   schedule:
-    - cron: "0 * * * *"  # 每1小时运行一次
+    - cron: "0 * * * *" # 每1小时运行一次
   workflow_dispatch:
 
 jobs:
@@ -65,3 +65,6 @@ jobs:
           commit_message: "chore: sync Class Widgets 2 plugin metadata [skip ci]"
           commit_options: "--no-verify --signoff"
           file_pattern: "ClassWidgets2/plugins/"
+          commit_user_name: "ChimeYao-bot"
+          commit_user_email: "ChimeYao@outlook.jp"
+          commit_author: "ChimeYao-bot <ChimeYao@outlook.jp>"

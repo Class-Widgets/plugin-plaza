@@ -103,7 +103,7 @@ def build_cw2_check_result_comment(
     else:
         py_error_text = "\n".join(f"- {err}" for err in py_errors)
         py_section = f"[ERROR] **Python文件 编译检查失败**\n\n{py_error_text}"
-    
+
     if json_ok:
         formatted_json = json.dumps(plugin_json_data, indent=2, ensure_ascii=False)
         json_section = f"[OK] **cwplugin.json (Class Widgets 2) 检查通过**\n\n```json\n{formatted_json}\n```"
@@ -111,7 +111,9 @@ def build_cw2_check_result_comment(
         json_error_text = "\n".join(f"- {err}" for err in json_errors)
         json_section = f"[ERROR] **cwplugin.json (Class Widgets 2) 检查失败**\n\n{json_error_text}"
 
-    overall_status = "[OK] **Class Widgets 2 仓库检查通过**" if (py_ok and json_ok) else "[ERROR] **Class Widgets 2 仓库检查失败**"
+    overall_status = (
+        "[OK] **Class Widgets 2 仓库检查通过**" if (py_ok and json_ok) else "[ERROR] **Class Widgets 2 仓库检查失败**"
+    )
 
     return f"""{overall_status}
 
@@ -131,22 +133,22 @@ def main():
     if not repo_dir.exists():
         print(f"[ERROR] 仓库目录不存在: {repo_dir}")
         sys.exit(1)
-    
+
     print(f"检查Class Widgets 2插件仓库: {repo_dir}")
-    
+
     py_ok, py_errors = check_cw2_python_files(repo_dir)
     json_ok, json_errors, plugin_json_data = check_cw2_plugin_json(repo_dir)
-    
+
     overall_ok = py_ok and json_ok
     comment = build_cw2_check_result_comment(py_ok, py_errors, json_ok, json_errors, plugin_json_data)
-    
+
     artifacts_dir = Path("artifacts")
     artifacts_dir.mkdir(exist_ok=True)
-    
+
     # 保存检查结果评论
     with open(artifacts_dir / "cw2_repo_check_comment.md", "w", encoding="utf-8") as f:
         f.write(comment)
-    
+
     # 保存详细的检查结果JSON
     result_data = {
         "success": overall_ok,
@@ -154,14 +156,14 @@ def main():
         "python_check": {"success": py_ok, "errors": py_errors},
         "plugin_json_check": {"success": json_ok, "errors": json_errors, "data": plugin_json_data},
     }
-    
+
     with open(artifacts_dir / "cw2_repo_check_result.json", "w", encoding="utf-8") as f:
         json.dump(result_data, f, indent=2, ensure_ascii=False)
-    
+
     print(f"cw2_repo_check_success={str(overall_ok).lower()}")
     print(f"cw2_python_check_success={str(py_ok).lower()}")
     print(f"cw2_plugin_json_check_success={str(json_ok).lower()}")
-    
+
     if overall_ok:
         print("[SUCCESS] Class Widgets 2 仓库检查通过!")
     else:

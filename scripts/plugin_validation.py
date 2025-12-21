@@ -346,7 +346,7 @@ def main() -> None:
     if action == "REGISTRY_VALIDATE":
         validate_registry()
         return
-    is_commit = os.getenv("IS_COMMIT", "false").lower() == "true"
+    os.getenv("IS_COMMIT", "false").lower() == "true"
     is_revalidate = os.getenv("IS_REVALIDATE", "false").lower() == "true"
 
     if is_revalidate:

@@ -46,7 +46,7 @@ jobs:
         run: |
           # 从checkboxes字段中获取操作选项
           ISSUE_BODY="${{ github.event.issue.body }}"
-          
+
           # 检查是否勾选了"重新验证"选项
           if echo "$ISSUE_BODY" | grep -q "operation-options.*- \[x\] 重新验证"; then
             echo "is_revalidate=true" >> $GITHUB_OUTPUT
@@ -276,6 +276,9 @@ jobs:
 
           commit_options: "--no-verify --signoff"
           file_pattern: "ClassWidgets2/plugins/"
+          commit_user_name: "ChimeYao-bot"
+          commit_user_email: "ChimeYao@outlook.jp"
+          commit_author: "${{ github.event.issue.user.login }} <${{ github.event.issue.user.id }}+${{ github.event.issue.user.login }}@users.noreply.github.com>"
 
       - name: Update comment with commit status
         if: steps.commit-file.outcome == 'success'

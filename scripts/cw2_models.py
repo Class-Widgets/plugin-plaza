@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-from pydantic import BaseModel, Field, RootModel, field_validator, model_validator
 import re
+
+from pydantic import BaseModel, Field, RootModel, field_validator, model_validator
 
 GITHUB_URL_RE = r"^https://github.com/[\w.-]+/[\w.-]+/?$"
 BRANCH_RE = r"^[A-Za-z0-9._\-]+$"

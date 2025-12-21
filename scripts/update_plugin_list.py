@@ -34,7 +34,7 @@ def update_plugin_list():
     with open(PLUGIN_LIST_PATH, encoding="utf-8") as f:
         raw_registry = json.load(f)
     try:
-        validated_registry = Registry.model_validate(raw_registry)
+        Registry.model_validate(raw_registry)
         registry = raw_registry
         print("✅ 插件列表结构验证通过")
     except ValidationError as e:

@@ -9,7 +9,6 @@ labels:
 assignees: []
 
 body:
-
   - type: markdown
     attributes:
       value: |
@@ -28,7 +27,7 @@ body:
         4. 验证通过后，您需要手动勾选"执行提交"选项来完成最终提交
 
         ---
-        
+
   - type: input
     id: plugin-id
     attributes:

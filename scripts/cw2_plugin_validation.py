@@ -2,12 +2,11 @@
 import json
 import os
 import re
-import sys
 from pathlib import Path
 from typing import Any
 
 import requests
-from cw2_models import CW2Submission, CW2ManifestItem, CW2ManifestRegistry
+from cw2_models import CW2ManifestItem, CW2Submission
 from pydantic import ValidationError
 
 
@@ -70,7 +69,7 @@ def validate_submission_metadata(data: dict[str, Any]) -> tuple[bool, list[str],
         tags_list = None
         if submission.tags:
             tags_list = [tag.strip() for tag in submission.tags.split(",") if tag.strip()]
-        
+
         manifest_item = CW2ManifestItem(
             id=submission.id,
             name=submission.name,
@@ -163,7 +162,7 @@ def validate_submission() -> None:
         artifacts_dir.mkdir(exist_ok=True)
         with open(artifacts_dir / "cw2_validation_result.json", "w", encoding="utf-8") as f:
             json.dump(validation_result, f, indent=2, ensure_ascii=False)
-        
+
         # 创建提交标志文件
         with open(artifacts_dir / "commit.flag", "w") as f:
             f.write("true")
@@ -212,30 +211,27 @@ def main() -> None:
     """主函数"""
     try:
         validate_submission()
-        
+
         # 设置 GitHub Actions 输出
         github_output = os.getenv("GITHUB_OUTPUT")
         result_file = Path("artifacts/cw2_validation_result.json")
-        
+
         if result_file.exists():
             try:
-                with open(result_file, "r", encoding="utf-8") as f:
+                with open(result_file, encoding="utf-8") as f:
                     result_data = json.load(f)
-                    if result_data.get("success", False):
-                        needs_repo_check = "true"
-                    else:
-                        needs_repo_check = "false"
+                    needs_repo_check = "true" if result_data.get("success", False) else "false"
             except Exception:
                 needs_repo_check = "false"
         else:
             needs_repo_check = "false"
-            
+
         if github_output:
             with open(github_output, "a", encoding="utf-8") as f:
                 f.write(f"needs_repo_check={needs_repo_check}\n")
         else:
             print(f"::set-output name=needs_repo_check::{needs_repo_check}")
-                
+
     except SystemExit:
         github_output = os.getenv("GITHUB_OUTPUT")
         if github_output:

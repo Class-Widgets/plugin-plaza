@@ -1,4 +1,4 @@
-﻿# 插件广场 (Plugin Plaza)
+# 插件广场 (Plugin Plaza)
 
 插件的索引仓库
 
@@ -12,20 +12,20 @@
 
 我们提供了**两种方式**来部署您的插件:
 
-####  方式一: Issue 模板提交
+#### 方式一: Issue 模板提交
 
 1. 确保您的插件仓库包含有效的 plugin.json 文件
 2. 在 GitHub 仓库中发布至少一个 Release
 3. [点击这里创建插件提交 Issue](../../issues/new?)
 4. 填写插件信息并提交
 
-####  方式二: PR 提交
+#### 方式二: PR 提交
 
 1. Fork 本项目
 2. 修改 ./Plugins/plugin_list.json 文件或创建新的 ClassWidgets2/plugins/manifest/插件ID.json 文件
 3. 提交 Pull Request
 
-##  插件信息格式
+## 插件信息格式
 
 ### Class Widgets 1 插件 (Legacy Plugins)
 

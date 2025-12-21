@@ -1,6 +1,14 @@
 {
   "slides": [
-    { "image": "/images/BannerWelcome.png", "title": "欢迎来到插件广场", "desc": "精选扩展与主题，提升你的浏览体验。" },
-    { "image": "/images/BannerDev.png", "title": "我喜欢你", "desc": "快来用 <a href=\"https://github.com/class-widgets/class-widgets-sdk\">Class Widgets SDK</a> 开发插件" }
+    {
+      "image": "/images/BannerWelcome.png",
+      "title": "欢迎来到插件广场",
+      "desc": "精选扩展与主题，提升你的浏览体验。"
+    },
+    {
+      "image": "/images/BannerDev.png",
+      "title": "我喜欢你",
+      "desc": "快来用 <a href=\"https://github.com/class-widgets/class-widgets-sdk\">Class Widgets SDK</a> 开发插件"
+    }
   ]
 }
