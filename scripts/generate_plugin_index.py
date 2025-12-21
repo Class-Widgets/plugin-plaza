@@ -2,7 +2,7 @@
 """
 Plugin Manifest Index Generator
 
-自动扫描manifest目录中的所有插件配置文件，
+自动扫描manifest目录中的所有插件配置文件
 生成结构化的插件索引文件。
 """
 
@@ -24,7 +24,7 @@ class PluginIndexGenerator:
 
         Args:
             manifest_dir: manifest目录路径
-            output_file: 输出文件路径，默认为manifest_dir/../index.json (plugins文件夹下)
+            output_file: 输出文件路径, 默认为manifest_dir/../index.json (plugins文件夹下)
         """
         self.manifest_dir = Path(manifest_dir).resolve()
         if output_file:
@@ -53,7 +53,7 @@ class PluginIndexGenerator:
             file_path: JSON文件路径
 
         Returns:
-            解析后的插件信息字典，解析失败返回None
+            解析后的插件信息字典, 解析失败返回None
         """
         try:
             with open(file_path, encoding="utf-8") as f:

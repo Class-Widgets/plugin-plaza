@@ -82,14 +82,21 @@ def update_cw2_plugin_list():
     existing_registry = load_existing_cw2_registry()
 
     if not existing_registry:
-        print("ℹ️ 未找到现有插件，任务完成")
+        print("ℹ️ 未找到现有插件, 任务完成")
+        github_output = os.environ.get("GITHUB_OUTPUT")
+        if github_output:
+            try:
+                with open(github_output, "a", encoding="utf-8") as f:
+                    f.write("updated_count=0\n")
+            except Exception:
+                pass
         return
 
     # 更新每个插件的信息
     updated_count = 0
     for plugin_id, plugin_info in existing_registry.items():
         if not isinstance(plugin_info, dict):
-            print(f"⚠️ 插件 {plugin_id} 的数据格式不正确，跳过")
+            print(f"⚠️ 插件 {plugin_id} 的数据格式不正确, 跳过")
             continue
 
         plugin_data = fetch_cw2_plugin_info(plugin_info["url"], plugin_info["branch"], plugin_id)
@@ -138,6 +145,14 @@ def update_cw2_plugin_list():
     except ValidationError as e:
         print("⚠️ Class Widgets 2 插件清单结构验证失败:")
         print(e)
+
+    github_output = os.environ.get("GITHUB_OUTPUT")
+    if github_output:
+        try:
+            with open(github_output, "a", encoding="utf-8") as f:
+                f.write(f"updated_count={updated_count}\n")
+        except Exception:
+            pass
 
 
 if __name__ == "__main__":

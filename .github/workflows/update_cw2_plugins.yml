@@ -34,12 +34,14 @@ jobs:
           pip install pydantic requests
 
       - name: Run CW2 updater
+        id: cw2_updater
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python scripts/update_cw2_plugin_index.py
 
       - name: Generate plugin index
+        if: steps.cw2_updater.outputs.updated_count != '0'
         run: |
           python scripts/generate_plugin_index.py ClassWidgets2/plugins/manifest
 

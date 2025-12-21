@@ -206,7 +206,7 @@ jobs:
             echo "" >> final-artifacts/comment.md
           fi
           if [ -f repo-check-artifacts/repo_check_result.json ]; then
-            repo_success=$(python -c "import json; print(json.load(open('repo-check-artifacts/repo_check_result.json'))['success'])") 2>/dev/null || echo "false")
+            repo_success=$(python -c "import json; print(json.load(open('repo-check-artifacts/repo_check_result.json'))['success'])" 2>/dev/null || echo "false")
             # if [ -f repo-check-artifacts/repo_check_comment.md ]; then
             #   echo "" >> final-artifacts/comment.md
             #   echo "---" >> final-artifacts/comment.md
