@@ -1,23 +1,40 @@
 {
   "metadata": {
-    "generated_at": "2025-12-19T17:10:47.468408",
+    "generated_at": "2026-01-01T13:05:22.955767",
     "manifest_directory": "/home/runner/work/plugin-plaza/plugin-plaza/ClassWidgets2/plugins/manifest",
-    "total_files_scanned": 1,
+    "total_files_scanned": 2,
     "generator_version": "1.0.0"
   },
   "statistics": {
-    "total_plugins": 1,
+    "total_plugins": 2,
     "total_errors": 0,
-    "unique_authors": ["RinLit"],
+    "unique_authors": ["LaoShui", "RinLit"],
     "version_distribution": {
-      "1.0.0": 1
+      "1.0.0": 2
     },
     "tag_distribution": {
-      "example": 1,
-      "tools": 1
+      "tools": 2,
+      "classroom_environment": 1,
+      "example": 1
     }
   },
   "plugins": [
+    {
+      "id": "com.laoshui.yiyan",
+      "name": "每日一言",
+      "version": "1.0.0",
+      "api_version": ">=0.1.0",
+      "description": "每天分享一句话，激励大家学习。",
+      "author": "LaoShui",
+      "url": "https://github.com/laoshuikaixue/cw2-yiyan-plugin",
+      "branch": "master",
+      "readme": "README.md",
+      "icon": "icon.png",
+      "tags": ["classroom_environment", "tools"],
+      "_file_path": "com.laoshui.yiyan.json",
+      "_file_size": 417,
+      "_modified_time": "2026-01-01T13:05:22.663731"
+    },
     {
       "id": "com.rinlit.test",
       "name": "Test",
@@ -31,8 +48,8 @@
       "icon": "icon.png",
       "tags": ["example", "tools"],
       "_file_path": "com.rinlit.test.json",
-      "_file_size": 330,
-      "_modified_time": "2025-12-19T17:10:42.250705"
+      "_file_size": 373,
+      "_modified_time": "2026-01-01T13:05:22.883730"
     }
   ],
   "errors": []
