@@ -103,10 +103,15 @@ def update_cw2_plugin_list():
 
         if plugin_data:
             try:
-                # 验证并更新插件数据
-                pj = CW2PluginJson(**plugin_data)
+                # 确保远程数据包含必要的字段且不为空，使用本地存储的值作为回退
+                plugin_data_with_fallback = plugin_data.copy()
+                if not plugin_data_with_fallback.get("url"):
+                    plugin_data_with_fallback["url"] = plugin_info["url"]
 
-                # 保持原有的额外字段（如tags）
+                # 验证并更新插件数据
+                pj = CW2PluginJson(**plugin_data_with_fallback)
+
+                # 保持原有的额外字段（如tags），branch始终使用本地值
                 updated_plugin_info = plugin_info.copy()
                 updated_plugin_info.update(
                     {
@@ -116,7 +121,8 @@ def update_cw2_plugin_list():
                         "description": pj.description or plugin_info.get("description", "未知"),
                         "author": pj.author or plugin_info.get("author", "未知"),
                         "url": pj.url,
-                        "branch": pj.branch,
+                        # branch始终使用本地manifest中的值，不随远程更新
+                        "branch": plugin_info["branch"],
                         "readme": pj.readme,
                         "icon": pj.icon,
                         "tags": pj.tags or plugin_info.get("tags", []),
