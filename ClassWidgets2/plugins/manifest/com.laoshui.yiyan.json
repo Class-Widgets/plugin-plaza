@@ -6,6 +6,7 @@
   "description": "每天分享一句话，激励大家学习。",
   "author": "LaoShui",
   "url": "https://github.com/laoshuikaixue/cw2-yiyan-plugin",
+  "branch": "master",
   "readme": "README.md",
   "icon": "icon.png",
   "tags": ["classroom_environment", "tools"]
