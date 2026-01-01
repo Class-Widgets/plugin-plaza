@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-01-01T13:06:49.761649",
+    "generated_at": "2026-01-01T13:27:21.221244",
     "manifest_directory": "/home/runner/work/plugin-plaza/plugin-plaza/ClassWidgets2/plugins/manifest",
     "total_files_scanned": 3,
     "generator_version": "1.0.0"
@@ -10,7 +10,8 @@
     "total_errors": 0,
     "unique_authors": ["LaoShui", "RinLit"],
     "version_distribution": {
-      "1.0.0": 3
+      "1.0.0": 2,
+      "1.0.2": 1
     },
     "tag_distribution": {
       "tools": 3,
@@ -23,7 +24,7 @@
     {
       "id": "com.laoshui.voicehub",
       "name": "VoiceHub 广播站排期",
-      "version": "1.0.0",
+      "version": "1.0.2",
       "api_version": ">=0.1.0",
       "author": "LaoShui",
       "description": "展示广播站当日排期歌曲，按播放顺序显示歌曲信息",
@@ -34,7 +35,7 @@
       "tags": ["classroom_environment", "tools", "Information"],
       "_file_path": "com.laoshui.voicehub.json",
       "_file_size": 482,
-      "_modified_time": "2026-01-01T13:06:49.510885"
+      "_modified_time": "2026-01-01T13:27:20.680141"
     },
     {
       "id": "com.laoshui.yiyan",
@@ -50,7 +51,7 @@
       "tags": ["classroom_environment", "tools"],
       "_file_path": "com.laoshui.yiyan.json",
       "_file_size": 417,
-      "_modified_time": "2026-01-01T13:06:49.244888"
+      "_modified_time": "2026-01-01T13:27:20.192139"
     },
     {
       "id": "com.rinlit.test",
@@ -66,7 +67,7 @@
       "tags": ["example", "tools"],
       "_file_path": "com.rinlit.test.json",
       "_file_size": 373,
-      "_modified_time": "2026-01-01T13:06:49.688882"
+      "_modified_time": "2026-01-01T13:27:21.150142"
     }
   ],
   "errors": []
