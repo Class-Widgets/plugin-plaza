@@ -107,11 +107,13 @@ def update_cw2_plugin_list():
                 plugin_data_with_fallback = plugin_data.copy()
                 if not plugin_data_with_fallback.get("url"):
                     plugin_data_with_fallback["url"] = plugin_info["url"]
+                # branch字段始终使用本地值，不依赖远程数据
+                plugin_data_with_fallback["branch"] = plugin_info["branch"]
 
                 # 验证并更新插件数据
                 pj = CW2PluginJson(**plugin_data_with_fallback)
 
-                # 保持原有的额外字段（如tags），branch始终使用本地值
+                # 保持原有的额外字段（如tags）
                 updated_plugin_info = plugin_info.copy()
                 updated_plugin_info.update(
                     {
@@ -121,8 +123,7 @@ def update_cw2_plugin_list():
                         "description": pj.description or plugin_info.get("description", "未知"),
                         "author": pj.author or plugin_info.get("author", "未知"),
                         "url": pj.url,
-                        # branch始终使用本地manifest中的值，不随远程更新
-                        "branch": plugin_info["branch"],
+                        "branch": plugin_info["branch"],  # 始终使用本地branch值
                         "readme": pj.readme,
                         "icon": pj.icon,
                         "tags": pj.tags or plugin_info.get("tags", []),
@@ -134,9 +135,14 @@ def update_cw2_plugin_list():
                 updated_count += 1
 
             except ValidationError as e:
-                print(f"⚠️ 插件 {plugin_id} 的 plugin.json 校验失败: {e}")
+                print(f"⚠️ 插件 {plugin_id} 的 plugin.json 校验失败:")
+                for error in e.errors():
+                    field = error.get("loc", ["未知字段"])[0]
+                    error_type = error.get("type", "未知错误类型")
+                    error_msg = error.get("msg", "未知错误信息")
+                    print(f"  - 字段 '{field}': {error_msg} (类型: {error_type})")
             except Exception as e:
-                print(f"⚠️ 处理插件 {plugin_id} 时出现错误: {e}")
+                print(f"⚠️ 处理插件 {plugin_id} 时出现错误: {type(e).__name__}: {str(e)}")
         else:
             print(f"⚠️ 插件 {plugin_id} 更新失败，跳过")
 
