@@ -2,7 +2,7 @@
   "id": "com.rinlit.test",
   "name": "Test",
   "version": "1.0.0",
-  "api_version": ">=0.1.0",
+  "api_version": "~=0.3.0",
   "description": "A Class Widgets plugin.",
   "author": "RinLit",
   "url": "https://github.com/Class-Widgets/plugin-template-v2/",

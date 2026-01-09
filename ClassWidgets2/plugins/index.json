@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-01-09T19:12:41.983018",
+    "generated_at": "2026-01-09T20:12:41.529455",
     "manifest_directory": "/home/runner/work/plugin-plaza/plugin-plaza/ClassWidgets2/plugins/manifest",
     "total_files_scanned": 3,
     "generator_version": "1.0.0"
@@ -35,7 +35,7 @@
       "tags": ["classroom_environment", "tools", "Information"],
       "_file_path": "com.laoshui.voicehub.json",
       "_file_size": 482,
-      "_modified_time": "2026-01-09T19:12:41.476346"
+      "_modified_time": "2026-01-09T20:12:41.071948"
     },
     {
       "id": "com.laoshui.yiyan",
@@ -51,13 +51,13 @@
       "tags": ["classroom_environment", "tools"],
       "_file_path": "com.laoshui.yiyan.json",
       "_file_size": 417,
-      "_modified_time": "2026-01-09T19:12:41.056343"
+      "_modified_time": "2026-01-09T20:12:40.590948"
     },
     {
       "id": "com.rinlit.test",
       "name": "Test",
       "version": "1.0.0",
-      "api_version": ">=0.1.0",
+      "api_version": "~=0.3.0",
       "description": "A Class Widgets plugin.",
       "author": "RinLit",
       "url": "https://github.com/Class-Widgets/plugin-template-v2/",
@@ -67,7 +67,7 @@
       "tags": ["example", "tools"],
       "_file_path": "com.rinlit.test.json",
       "_file_size": 373,
-      "_modified_time": "2026-01-09T19:12:41.910348"
+      "_modified_time": "2026-01-09T20:12:41.454948"
     }
   ],
   "errors": []
