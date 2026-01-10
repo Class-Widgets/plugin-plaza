@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-01-10T22:34:03.432629",
+    "generated_at": "2026-01-10T23:09:45.161931",
     "manifest_directory": "/home/runner/work/plugin-plaza/plugin-plaza/ClassWidgets2/plugins/manifest",
     "total_files_scanned": 4,
     "generator_version": "1.0.0"
@@ -8,10 +8,7 @@
   "statistics": {
     "total_plugins": 4,
     "total_errors": 0,
-    "unique_authors": [
-      "LaoShui",
-      "RinLit"
-    ],
+    "unique_authors": ["LaoShui", "RinLit"],
     "version_distribution": {
       "1.0.0": 3,
       "1.0.2": 1
@@ -38,14 +35,10 @@
       "branch": "master",
       "readme": "README.md",
       "icon": "icon.png",
-      "tags": [
-        "classroom_environment",
-        "tools",
-        "Information"
-      ],
+      "tags": ["classroom_environment", "tools", "Information"],
       "_file_path": "com.laoshui.voicehub.json",
-      "_file_size": 431,
-      "_modified_time": "2026-01-10T22:33:49.425436"
+      "_file_size": 482,
+      "_modified_time": "2026-01-10T23:09:44.835960"
     },
     {
       "id": "com.laoshui.yiyan",
@@ -58,13 +51,10 @@
       "branch": "master",
       "readme": "README.md",
       "icon": "icon.png",
-      "tags": [
-        "classroom_environment",
-        "tools"
-      ],
+      "tags": ["classroom_environment", "tools"],
       "_file_path": "com.laoshui.yiyan.json",
-      "_file_size": 374,
-      "_modified_time": "2026-01-10T22:33:49.425436"
+      "_file_size": 417,
+      "_modified_time": "2026-01-10T23:09:44.546962"
     },
     {
       "id": "com.rinlit.countdowndays",
@@ -77,15 +67,10 @@
       "branch": "master",
       "readme": "README.md",
       "icon": "icon.png",
-      "tags": [
-        "tools",
-        "utility",
-        "widget",
-        "reminder"
-      ],
+      "tags": ["tools", "utility", "widget", "reminder"],
       "_file_path": "com.rinlit.countdowndays.json",
-      "_file_size": 422,
-      "_modified_time": "2026-01-10T22:34:02.960530"
+      "_file_size": 491,
+      "_modified_time": "2026-01-10T23:09:44.258963"
     },
     {
       "id": "com.rinlit.test",
@@ -98,13 +83,10 @@
       "branch": "master",
       "readme": "README.md",
       "icon": "icon.png",
-      "tags": [
-        "example",
-        "tools"
-      ],
+      "tags": ["example", "tools"],
       "_file_path": "com.rinlit.test.json",
-      "_file_size": 330,
-      "_modified_time": "2026-01-10T22:33:49.425436"
+      "_file_size": 373,
+      "_modified_time": "2026-01-10T23:09:45.085959"
     }
   ],
   "errors": []
