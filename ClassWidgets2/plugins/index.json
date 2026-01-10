@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-01-10T10:10:26.032946",
+    "generated_at": "2026-01-10T11:08:17.684848",
     "manifest_directory": "/home/runner/work/plugin-plaza/plugin-plaza/ClassWidgets2/plugins/manifest",
     "total_files_scanned": 3,
     "generator_version": "1.0.0"
@@ -35,7 +35,7 @@
       "tags": ["classroom_environment", "tools", "Information"],
       "_file_path": "com.laoshui.voicehub.json",
       "_file_size": 482,
-      "_modified_time": "2026-01-10T10:10:25.496376"
+      "_modified_time": "2026-01-10T11:08:17.354177"
     },
     {
       "id": "com.laoshui.yiyan",
@@ -51,7 +51,7 @@
       "tags": ["classroom_environment", "tools"],
       "_file_path": "com.laoshui.yiyan.json",
       "_file_size": 417,
-      "_modified_time": "2026-01-10T10:10:25.047377"
+      "_modified_time": "2026-01-10T11:08:17.082179"
     },
     {
       "id": "com.rinlit.test",
@@ -67,7 +67,7 @@
       "tags": ["example", "tools"],
       "_file_path": "com.rinlit.test.json",
       "_file_size": 373,
-      "_modified_time": "2026-01-10T10:10:25.959375"
+      "_modified_time": "2026-01-10T11:08:17.612176"
     }
   ],
   "errors": []
