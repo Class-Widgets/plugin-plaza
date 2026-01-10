@@ -1,22 +1,28 @@
 {
   "metadata": {
-    "generated_at": "2026-01-10T22:09:47.433019",
+    "generated_at": "2026-01-10T22:32:05.209326",
     "manifest_directory": "/home/runner/work/plugin-plaza/plugin-plaza/ClassWidgets2/plugins/manifest",
-    "total_files_scanned": 3,
+    "total_files_scanned": 4,
     "generator_version": "1.0.0"
   },
   "statistics": {
-    "total_plugins": 3,
+    "total_plugins": 4,
     "total_errors": 0,
-    "unique_authors": ["LaoShui", "RinLit"],
+    "unique_authors": [
+      "LaoShui",
+      "RinLit"
+    ],
     "version_distribution": {
-      "1.0.0": 2,
+      "1.0.0": 3,
       "1.0.2": 1
     },
     "tag_distribution": {
-      "tools": 3,
+      "tools": 4,
       "classroom_environment": 2,
       "Information": 1,
+      "widget": 1,
+      "utility": 1,
+      "reminder": 1,
       "example": 1
     }
   },
@@ -32,10 +38,14 @@
       "branch": "master",
       "readme": "README.md",
       "icon": "icon.png",
-      "tags": ["classroom_environment", "tools", "Information"],
+      "tags": [
+        "classroom_environment",
+        "tools",
+        "Information"
+      ],
       "_file_path": "com.laoshui.voicehub.json",
-      "_file_size": 482,
-      "_modified_time": "2026-01-10T22:09:46.846024"
+      "_file_size": 431,
+      "_modified_time": "2026-01-10T22:31:52.235462"
     },
     {
       "id": "com.laoshui.yiyan",
@@ -48,10 +58,34 @@
       "branch": "master",
       "readme": "README.md",
       "icon": "icon.png",
-      "tags": ["classroom_environment", "tools"],
+      "tags": [
+        "classroom_environment",
+        "tools"
+      ],
       "_file_path": "com.laoshui.yiyan.json",
-      "_file_size": 417,
-      "_modified_time": "2026-01-10T22:09:46.342027"
+      "_file_size": 374,
+      "_modified_time": "2026-01-10T22:31:52.235462"
+    },
+    {
+      "id": "com.rinlit.countdowndays",
+      "name": "Countdown Days",
+      "version": "1.0.0",
+      "api_version": "~=0.3.0",
+      "description": "西大不丢 2 (Class Widgets 2) 倒计日插件/ Countdown Days Plugin",
+      "author": "RinLit",
+      "url": "https://github.com/RinLit-233-shiroko/cw-countdown-days",
+      "branch": "master",
+      "readme": "README.md",
+      "icon": "icon.png",
+      "tags": [
+        "widget",
+        "tools",
+        "utility",
+        "reminder"
+      ],
+      "_file_path": "com.rinlit.countdowndays.json",
+      "_file_size": 441,
+      "_modified_time": "2026-01-10T22:31:59.073455"
     },
     {
       "id": "com.rinlit.test",
@@ -64,10 +98,13 @@
       "branch": "master",
       "readme": "README.md",
       "icon": "icon.png",
-      "tags": ["example", "tools"],
+      "tags": [
+        "example",
+        "tools"
+      ],
       "_file_path": "com.rinlit.test.json",
-      "_file_size": 373,
-      "_modified_time": "2026-01-10T22:09:47.360021"
+      "_file_size": 330,
+      "_modified_time": "2026-01-10T22:31:52.235462"
     }
   ],
   "errors": []
