@@ -9,10 +9,5 @@
   "branch": "master",
   "readme": "README.md",
   "icon": "icon.png",
-  "tags": [
-    "widget",
-    "tools",
-    "utility",
-    "reminder"
-  ]
+  "tags": ["tools", "utility", "widget", "reminder"]
 }
