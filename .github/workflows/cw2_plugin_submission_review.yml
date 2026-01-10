@@ -212,7 +212,7 @@ jobs:
             echo "" >> final-artifacts/cw2_comment.md
           fi
           if [ -f repo-check-artifacts/cw2_repo_check_result.json ]; then
-            repo_success=$(python -c "import json; print(json.load(open('repo-check-artifacts/cw2_repo_check_result.json'))['success'])") 2>/dev/null || echo "false")
+            repo_success=$(python -c "import json; print(json.load(open('repo-check-artifacts/cw2_repo_check_result.json'))['success'])" 2>/dev/null || echo "false")
           fi
 
       - name: Find bot comment
