@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-01-18T06:16:00.231119",
+    "generated_at": "2026-01-18T07:11:58.483961",
     "manifest_directory": "/home/runner/work/plugin-plaza/plugin-plaza/ClassWidgets2/plugins/manifest",
     "total_files_scanned": 4,
     "generator_version": "1.0.0"
@@ -38,7 +38,7 @@
       "tags": ["classroom_environment", "tools", "Information"],
       "_file_path": "com.laoshui.voicehub.json",
       "_file_size": 482,
-      "_modified_time": "2026-01-18T06:15:59.777450"
+      "_modified_time": "2026-01-18T07:11:58.232767"
     },
     {
       "id": "com.laoshui.yiyan",
@@ -54,7 +54,7 @@
       "tags": ["classroom_environment", "tools"],
       "_file_path": "com.laoshui.yiyan.json",
       "_file_size": 417,
-      "_modified_time": "2026-01-18T06:15:59.406450"
+      "_modified_time": "2026-01-18T07:11:58.051766"
     },
     {
       "id": "com.rinlit.countdowndays",
@@ -70,7 +70,7 @@
       "tags": ["tools", "utility", "widget", "reminder"],
       "_file_path": "com.rinlit.countdowndays.json",
       "_file_size": 491,
-      "_modified_time": "2026-01-18T06:15:58.995450"
+      "_modified_time": "2026-01-18T07:11:57.860765"
     },
     {
       "id": "com.rinlit.test",
@@ -86,7 +86,7 @@
       "tags": ["example", "tools"],
       "_file_path": "com.rinlit.test.json",
       "_file_size": 373,
-      "_modified_time": "2026-01-18T06:16:00.156450"
+      "_modified_time": "2026-01-18T07:11:58.406768"
     }
   ],
   "errors": []
