@@ -1,13 +1,18 @@
 {
-  "id": "com.rinlit.countdowndays",
-  "name": "倒数日 Countdown Days",
-  "version": "1.0.0",
-  "api_version": "~=0.3.0",
-  "description": "西大不丢 2 (Class Widgets 2) 倒计日插件/ Countdown Days Plugin",
-  "author": "RinLit",
-  "url": "https://github.com/RinLit-233-shiroko/cw-countdown-days",
-  "branch": "master",
-  "readme": "README.md",
-  "icon": "icon.png",
-  "tags": ["tools", "utility", "widget", "reminder"]
+    "id": "com.rinlit.countdowndays",
+    "name": "倒数日 Countdown Days",
+    "version": "1.0.0",
+    "api_version": "~=0.3.0",
+    "description": "西大不丢 2 (Class Widgets 2) 倒计日插件/ Countdown Days Plugin",
+    "author": "RinLit",
+    "url": "https://github.com/RinLit-233-shiroko/cw-countdown-days",
+    "branch": "master",
+    "readme": "README.md",
+    "icon": "icon.png",
+    "tags": [
+        "tools",
+        "utility",
+        "widget",
+        "reminder"
+    ]
 }
