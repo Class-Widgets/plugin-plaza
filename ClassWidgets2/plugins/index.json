@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-03-17T17:54:32.247258",
+    "generated_at": "2026-03-17T18:43:50.101780",
     "manifest_directory": "/home/runner/work/plugin-plaza/plugin-plaza/ClassWidgets2/plugins/manifest",
     "total_files_scanned": 6,
     "generator_version": "1.0.0"
@@ -42,7 +42,7 @@
       "tags": ["tts"],
       "_file_path": "com.hpdnya.tts.json",
       "_file_size": 357,
-      "_modified_time": "2026-03-17T17:54:32.164599"
+      "_modified_time": "2026-03-17T18:43:50.019685"
     },
     {
       "id": "com.laoshui.voicehub",
@@ -58,7 +58,7 @@
       "tags": ["classroom_environment", "tools", "Information"],
       "_file_path": "com.laoshui.voicehub.json",
       "_file_size": 482,
-      "_modified_time": "2026-03-17T17:54:30.556657"
+      "_modified_time": "2026-03-17T18:43:48.695669"
     },
     {
       "id": "com.laoshui.yiyan",
@@ -74,7 +74,7 @@
       "tags": ["classroom_environment", "tools"],
       "_file_path": "com.laoshui.yiyan.json",
       "_file_size": 417,
-      "_modified_time": "2026-03-17T17:54:30.069760"
+      "_modified_time": "2026-03-17T18:43:48.261909"
     },
     {
       "id": "com.rinlit.countdowndays",
@@ -90,7 +90,7 @@
       "tags": ["tools", "utility", "widget", "reminder"],
       "_file_path": "com.rinlit.countdowndays.json",
       "_file_size": 491,
-      "_modified_time": "2026-03-17T17:54:31.631714"
+      "_modified_time": "2026-03-17T18:43:49.605886"
     },
     {
       "id": "com.rinlit.test",
@@ -106,7 +106,7 @@
       "tags": ["example", "tools"],
       "_file_path": "com.rinlit.test.json",
       "_file_size": 373,
-      "_modified_time": "2026-03-17T17:54:29.537113"
+      "_modified_time": "2026-03-17T18:43:47.835538"
     },
     {
       "id": "com.yersmagit.lessonsdisplayer",
@@ -122,7 +122,7 @@
       "tags": ["tools", "classroom_environment", "information", "subject"],
       "_file_path": "com.yersmagit.lessonsdisplayer.json",
       "_file_size": 521,
-      "_modified_time": "2026-03-17T17:54:31.108290"
+      "_modified_time": "2026-03-17T18:43:49.211956"
     }
   ],
   "errors": []
