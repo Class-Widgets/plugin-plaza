@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-03-22T04:08:20.315948",
+    "generated_at": "2026-03-22T05:44:28.523489",
     "manifest_directory": "/home/runner/work/plugin-plaza/plugin-plaza/ClassWidgets2/plugins/manifest",
     "total_files_scanned": 6,
     "generator_version": "1.0.0"
@@ -10,7 +10,7 @@
     "total_errors": 0,
     "unique_authors": ["IsHPDuwu", "LaoShui", "RinLit", "Yersmagit"],
     "version_distribution": {
-      "0.2.0": 1,
+      "0.2.1": 1,
       "1.0.0": 4,
       "1.0.2": 1
     },
@@ -42,7 +42,7 @@
       "tags": ["tts"],
       "_file_path": "com.hpdnya.tts.json",
       "_file_size": 357,
-      "_modified_time": "2026-03-22T04:08:20.233971"
+      "_modified_time": "2026-03-22T05:44:28.436361"
     },
     {
       "id": "com.laoshui.voicehub",
@@ -58,7 +58,7 @@
       "tags": ["classroom_environment", "tools", "Information"],
       "_file_path": "com.laoshui.voicehub.json",
       "_file_size": 482,
-      "_modified_time": "2026-03-22T04:08:19.017851"
+      "_modified_time": "2026-03-22T05:44:27.827787"
     },
     {
       "id": "com.laoshui.yiyan",
@@ -74,7 +74,7 @@
       "tags": ["classroom_environment", "tools"],
       "_file_path": "com.laoshui.yiyan.json",
       "_file_size": 417,
-      "_modified_time": "2026-03-22T04:08:18.601685"
+      "_modified_time": "2026-03-22T05:44:27.620231"
     },
     {
       "id": "com.rinlit.countdowndays",
@@ -90,7 +90,7 @@
       "tags": ["tools", "utility", "widget", "reminder"],
       "_file_path": "com.rinlit.countdowndays.json",
       "_file_size": 491,
-      "_modified_time": "2026-03-22T04:08:19.814152"
+      "_modified_time": "2026-03-22T05:44:28.244080"
     },
     {
       "id": "com.rinlit.test",
@@ -106,14 +106,14 @@
       "tags": ["example", "tools"],
       "_file_path": "com.rinlit.test.json",
       "_file_size": 373,
-      "_modified_time": "2026-03-22T04:08:18.188068"
+      "_modified_time": "2026-03-22T05:44:27.418291"
     },
     {
       "id": "com.yersmagit.lessonsdisplayer",
       "name": "Lessons Displayer 全量展示课程",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "api_version": ">=0.2.0",
-      "description": "看看今天有什么课？LessonsDisplayer 正在迁移到 CW2 ！",
+      "description": "看看今天有什么课？或者想全屏展示你的课表？",
       "author": "Yersmagit",
       "url": "https://github.com/Yersmagit/cw2-lessons-displayer",
       "branch": "master",
@@ -121,8 +121,8 @@
       "icon": "icon.png",
       "tags": ["tools", "classroom_environment", "information", "subject"],
       "_file_path": "com.yersmagit.lessonsdisplayer.json",
-      "_file_size": 521,
-      "_modified_time": "2026-03-22T04:08:19.417880"
+      "_file_size": 517,
+      "_modified_time": "2026-03-22T05:44:28.046430"
     }
   ],
   "errors": []

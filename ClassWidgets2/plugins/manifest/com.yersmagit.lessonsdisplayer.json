@@ -1,9 +1,9 @@
 {
   "id": "com.yersmagit.lessonsdisplayer",
   "name": "Lessons Displayer 全量展示课程",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "api_version": ">=0.2.0",
-  "description": "看看今天有什么课？LessonsDisplayer 正在迁移到 CW2 ！",
+  "description": "看看今天有什么课？或者想全屏展示你的课表？",
   "author": "Yersmagit",
   "url": "https://github.com/Yersmagit/cw2-lessons-displayer",
   "branch": "master",
