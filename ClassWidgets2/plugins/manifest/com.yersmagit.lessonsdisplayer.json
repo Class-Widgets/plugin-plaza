@@ -1,7 +1,7 @@
 {
   "id": "com.yersmagit.lessonsdisplayer",
   "name": "Lessons Displayer 全量展示课程",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "api_version": ">=0.2.0",
   "description": "看看今天有什么课？或者想全屏展示你的课表？",
   "author": "Yersmagit",
