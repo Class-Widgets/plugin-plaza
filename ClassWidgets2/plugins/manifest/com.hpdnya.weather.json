@@ -1,0 +1,15 @@
+{
+  "id": "com.hpdnya.weather",
+  "name": "天气",
+  "version": "1.0.0",
+  "api_version": ">=0.3.0",
+  "description": "Class Widgets 2 天气插件，支持多种天气 API（Open-Meteo / 和风天气 / 小米天气），提供实时天气显示、天气预警通知等功能。",
+  "author": "IsHPDuwu",
+  "url": "https://github.com/IsHPDuwu/cw2p-com.hpdnya.weather",
+  "branch": "main",
+  "readme": "README.md",
+  "icon": null,
+  "tags": [
+    "weather"
+  ]
+}

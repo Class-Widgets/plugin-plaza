@@ -1,23 +1,29 @@
 {
   "metadata": {
-    "generated_at": "2026-03-28T18:22:49.102250",
+    "generated_at": "2026-03-28T18:49:42.021615",
     "manifest_directory": "/home/runner/work/plugin-plaza/plugin-plaza/ClassWidgets2/plugins/manifest",
-    "total_files_scanned": 6,
+    "total_files_scanned": 7,
     "generator_version": "1.0.0"
   },
   "statistics": {
-    "total_plugins": 6,
+    "total_plugins": 7,
     "total_errors": 0,
-    "unique_authors": ["IsHPDuwu", "LaoShui", "RinLit", "Yersmagit"],
+    "unique_authors": [
+      "IsHPDuwu",
+      "LaoShui",
+      "RinLit",
+      "Yersmagit"
+    ],
     "version_distribution": {
       "0.2.2": 1,
-      "1.0.0": 4,
+      "1.0.0": 5,
       "1.0.2": 1
     },
     "tag_distribution": {
       "tools": 5,
       "classroom_environment": 3,
       "tts": 1,
+      "weather": 1,
       "Information": 1,
       "utility": 1,
       "widget": 1,
@@ -39,10 +45,30 @@
       "branch": "main",
       "readme": "README.md",
       "icon": "icon.png",
-      "tags": ["tts"],
+      "tags": [
+        "tts"
+      ],
       "_file_path": "com.hpdnya.tts.json",
-      "_file_size": 357,
-      "_modified_time": "2026-03-28T18:22:49.021230"
+      "_file_size": 322,
+      "_modified_time": "2026-03-28T18:49:28.924032"
+    },
+    {
+      "id": "com.hpdnya.weather",
+      "name": "天气",
+      "version": "1.0.0",
+      "api_version": ">=0.3.0",
+      "description": "Class Widgets 2 天气插件，支持多种天气 API（Open-Meteo / 和风天气 / 小米天气），提供实时天气显示、天气预警通知等功能。",
+      "author": "IsHPDuwu",
+      "url": "https://github.com/IsHPDuwu/cw2p-com.hpdnya.weather",
+      "branch": "main",
+      "readme": "README.md",
+      "icon": null,
+      "tags": [
+        "weather"
+      ],
+      "_file_path": "com.hpdnya.weather.json",
+      "_file_size": 462,
+      "_modified_time": "2026-03-28T18:49:36.702848"
     },
     {
       "id": "com.laoshui.voicehub",
@@ -55,10 +81,14 @@
       "branch": "master",
       "readme": "README.md",
       "icon": "icon.png",
-      "tags": ["classroom_environment", "tools", "Information"],
+      "tags": [
+        "classroom_environment",
+        "tools",
+        "Information"
+      ],
       "_file_path": "com.laoshui.voicehub.json",
-      "_file_size": 482,
-      "_modified_time": "2026-03-28T18:22:48.437150"
+      "_file_size": 431,
+      "_modified_time": "2026-03-28T18:49:28.924067"
     },
     {
       "id": "com.laoshui.yiyan",
@@ -71,10 +101,13 @@
       "branch": "master",
       "readme": "README.md",
       "icon": "icon.png",
-      "tags": ["classroom_environment", "tools"],
+      "tags": [
+        "classroom_environment",
+        "tools"
+      ],
       "_file_path": "com.laoshui.yiyan.json",
-      "_file_size": 417,
-      "_modified_time": "2026-03-28T18:22:48.128906"
+      "_file_size": 374,
+      "_modified_time": "2026-03-28T18:49:28.924067"
     },
     {
       "id": "com.rinlit.countdowndays",
@@ -87,10 +120,15 @@
       "branch": "master",
       "readme": "README.md",
       "icon": "icon.png",
-      "tags": ["tools", "utility", "widget", "reminder"],
+      "tags": [
+        "tools",
+        "utility",
+        "widget",
+        "reminder"
+      ],
       "_file_path": "com.rinlit.countdowndays.json",
-      "_file_size": 491,
-      "_modified_time": "2026-03-28T18:22:47.849336"
+      "_file_size": 432,
+      "_modified_time": "2026-03-28T18:49:28.924067"
     },
     {
       "id": "com.rinlit.test",
@@ -103,10 +141,13 @@
       "branch": "master",
       "readme": "README.md",
       "icon": "icon.png",
-      "tags": ["example", "tools"],
+      "tags": [
+        "example",
+        "tools"
+      ],
       "_file_path": "com.rinlit.test.json",
-      "_file_size": 373,
-      "_modified_time": "2026-03-28T18:22:47.580258"
+      "_file_size": 330,
+      "_modified_time": "2026-03-28T18:49:28.924067"
     },
     {
       "id": "com.yersmagit.lessonsdisplayer",
@@ -119,10 +160,15 @@
       "branch": "master",
       "readme": "README.md",
       "icon": "icon.png",
-      "tags": ["tools", "classroom_environment", "information", "subject"],
+      "tags": [
+        "tools",
+        "classroom_environment",
+        "information",
+        "subject"
+      ],
       "_file_path": "com.yersmagit.lessonsdisplayer.json",
-      "_file_size": 517,
-      "_modified_time": "2026-03-28T18:22:48.741850"
+      "_file_size": 458,
+      "_modified_time": "2026-03-28T18:49:28.924067"
     }
   ],
   "errors": []
