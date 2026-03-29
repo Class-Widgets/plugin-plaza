@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-03-29T01:13:57.585403",
+    "generated_at": "2026-03-29T04:26:55.270589",
     "manifest_directory": "/home/runner/work/plugin-plaza/plugin-plaza/ClassWidgets2/plugins/manifest",
     "total_files_scanned": 7,
     "generator_version": "1.0.0"
@@ -43,7 +43,7 @@
       "tags": ["tts"],
       "_file_path": "com.hpdnya.tts.json",
       "_file_size": 357,
-      "_modified_time": "2026-03-29T01:13:57.509764"
+      "_modified_time": "2026-03-29T04:26:55.189956"
     },
     {
       "id": "com.hpdnya.weather",
@@ -59,7 +59,7 @@
       "tags": ["weather"],
       "_file_path": "com.hpdnya.weather.json",
       "_file_size": 490,
-      "_modified_time": "2026-03-29T01:13:57.289263"
+      "_modified_time": "2026-03-29T04:26:54.946069"
     },
     {
       "id": "com.laoshui.voicehub",
@@ -75,7 +75,7 @@
       "tags": ["classroom_environment", "tools", "Information"],
       "_file_path": "com.laoshui.voicehub.json",
       "_file_size": 482,
-      "_modified_time": "2026-03-29T01:13:56.780452"
+      "_modified_time": "2026-03-29T04:26:54.468321"
     },
     {
       "id": "com.laoshui.yiyan",
@@ -91,13 +91,13 @@
       "tags": ["classroom_environment", "tools"],
       "_file_path": "com.laoshui.yiyan.json",
       "_file_size": 417,
-      "_modified_time": "2026-03-29T01:13:56.529018"
+      "_modified_time": "2026-03-29T04:26:54.194512"
     },
     {
       "id": "com.rinlit.countdowndays",
       "name": "倒数日 Countdown Days",
       "version": "1.0.0",
-      "api_version": "~=0.3.0",
+      "api_version": ">=0.3.0",
       "description": "西大不丢 2 (Class Widgets 2) 倒计日插件/ Countdown Days Plugin",
       "author": "RinLit",
       "url": "https://github.com/RinLit-233-shiroko/cw-countdown-days",
@@ -107,7 +107,7 @@
       "tags": ["tools", "utility", "widget", "reminder"],
       "_file_path": "com.rinlit.countdowndays.json",
       "_file_size": 491,
-      "_modified_time": "2026-03-29T01:13:56.255800"
+      "_modified_time": "2026-03-29T04:26:53.930632"
     },
     {
       "id": "com.rinlit.test",
@@ -123,7 +123,7 @@
       "tags": ["example", "tools"],
       "_file_path": "com.rinlit.test.json",
       "_file_size": 373,
-      "_modified_time": "2026-03-29T01:13:56.029971"
+      "_modified_time": "2026-03-29T04:26:53.692776"
     },
     {
       "id": "com.yersmagit.lessonsdisplayer",
@@ -139,7 +139,7 @@
       "tags": ["tools", "classroom_environment", "information", "subject"],
       "_file_path": "com.yersmagit.lessonsdisplayer.json",
       "_file_size": 517,
-      "_modified_time": "2026-03-29T01:13:57.020369"
+      "_modified_time": "2026-03-29T04:26:54.686069"
     }
   ],
   "errors": []
