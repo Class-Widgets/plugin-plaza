@@ -9,7 +9,5 @@
   "branch": "main",
   "readme": "README.md",
   "icon": null,
-  "tags": [
-    "uiaccess"
-  ]
+  "tags": ["uiaccess"]
 }
