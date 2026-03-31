@@ -1,0 +1,15 @@
+{
+  "id": "com.hpdnya.uiaccess",
+  "name": "UIAccess",
+  "version": "1.0.0",
+  "api_version": ">=0.3.0",
+  "description": "为 Class Widgets 2 提升 UIAccess 令牌，使窗口可以置顶到全屏 UWP 应用和系统界面上方。需要以管理员身份运行。",
+  "author": "IsHPDuwu",
+  "url": "https://github.com/IsHPDuwu/cw2p-com.hpdnya.uiaccess",
+  "branch": "main",
+  "readme": "README.md",
+  "icon": null,
+  "tags": [
+    "uiaccess"
+  ]
+}

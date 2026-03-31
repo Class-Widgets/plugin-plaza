@@ -1,23 +1,29 @@
 {
   "metadata": {
-    "generated_at": "2026-03-31T11:39:01.241124",
+    "generated_at": "2026-03-31T12:12:16.648229",
     "manifest_directory": "/home/runner/work/plugin-plaza/plugin-plaza/ClassWidgets2/plugins/manifest",
-    "total_files_scanned": 7,
+    "total_files_scanned": 8,
     "generator_version": "1.0.0"
   },
   "statistics": {
-    "total_plugins": 7,
+    "total_plugins": 8,
     "total_errors": 0,
-    "unique_authors": ["IsHPDuwu", "LaoShui", "RinLit", "Yersmagit"],
+    "unique_authors": [
+      "IsHPDuwu",
+      "LaoShui",
+      "RinLit",
+      "Yersmagit"
+    ],
     "version_distribution": {
       "0.2.2": 1,
-      "1.0.0": 5,
+      "1.0.0": 6,
       "1.0.2": 1
     },
     "tag_distribution": {
       "tools": 5,
       "classroom_environment": 3,
       "tts": 1,
+      "uiaccess": 1,
       "weather": 1,
       "Information": 1,
       "utility": 1,
@@ -40,10 +46,30 @@
       "branch": "main",
       "readme": "README.md",
       "icon": "icon.png",
-      "tags": ["tts"],
+      "tags": [
+        "tts"
+      ],
       "_file_path": "com.hpdnya.tts.json",
-      "_file_size": 357,
-      "_modified_time": "2026-03-31T11:39:01.163697"
+      "_file_size": 322,
+      "_modified_time": "2026-03-31T12:12:04.727172"
+    },
+    {
+      "id": "com.hpdnya.uiaccess",
+      "name": "UIAccess",
+      "version": "1.0.0",
+      "api_version": ">=0.3.0",
+      "description": "为 Class Widgets 2 提升 UIAccess 令牌，使窗口可以置顶到全屏 UWP 应用和系统界面上方。需要以管理员身份运行。",
+      "author": "IsHPDuwu",
+      "url": "https://github.com/IsHPDuwu/cw2p-com.hpdnya.uiaccess",
+      "branch": "main",
+      "readme": "README.md",
+      "icon": null,
+      "tags": [
+        "uiaccess"
+      ],
+      "_file_path": "com.hpdnya.uiaccess.json",
+      "_file_size": 451,
+      "_modified_time": "2026-03-31T12:12:11.751421"
     },
     {
       "id": "com.hpdnya.weather",
@@ -56,10 +82,12 @@
       "branch": "main",
       "readme": "README.md",
       "icon": null,
-      "tags": ["weather"],
+      "tags": [
+        "weather"
+      ],
       "_file_path": "com.hpdnya.weather.json",
       "_file_size": 455,
-      "_modified_time": "2026-03-31T11:38:55.496700"
+      "_modified_time": "2026-03-31T12:12:04.727242"
     },
     {
       "id": "com.laoshui.voicehub",
@@ -72,10 +100,14 @@
       "branch": "master",
       "readme": "README.md",
       "icon": "icon.png",
-      "tags": ["classroom_environment", "tools", "Information"],
+      "tags": [
+        "classroom_environment",
+        "tools",
+        "Information"
+      ],
       "_file_path": "com.laoshui.voicehub.json",
-      "_file_size": 482,
-      "_modified_time": "2026-03-31T11:39:00.421966"
+      "_file_size": 431,
+      "_modified_time": "2026-03-31T12:12:04.727242"
     },
     {
       "id": "com.laoshui.yiyan",
@@ -88,10 +120,13 @@
       "branch": "master",
       "readme": "README.md",
       "icon": "icon.png",
-      "tags": ["classroom_environment", "tools"],
+      "tags": [
+        "classroom_environment",
+        "tools"
+      ],
       "_file_path": "com.laoshui.yiyan.json",
-      "_file_size": 417,
-      "_modified_time": "2026-03-31T11:39:00.192546"
+      "_file_size": 374,
+      "_modified_time": "2026-03-31T12:12:04.727242"
     },
     {
       "id": "com.rinlit.countdowndays",
@@ -104,10 +139,15 @@
       "branch": "master",
       "readme": "README.md",
       "icon": "icon.png",
-      "tags": ["tools", "utility", "widget", "reminder"],
+      "tags": [
+        "tools",
+        "utility",
+        "widget",
+        "reminder"
+      ],
       "_file_path": "com.rinlit.countdowndays.json",
-      "_file_size": 491,
-      "_modified_time": "2026-03-31T11:38:59.935419"
+      "_file_size": 432,
+      "_modified_time": "2026-03-31T12:12:04.727242"
     },
     {
       "id": "com.rinlit.test",
@@ -120,10 +160,13 @@
       "branch": "master",
       "readme": "README.md",
       "icon": "icon.png",
-      "tags": ["example", "tools"],
+      "tags": [
+        "example",
+        "tools"
+      ],
       "_file_path": "com.rinlit.test.json",
-      "_file_size": 373,
-      "_modified_time": "2026-03-31T11:38:59.702424"
+      "_file_size": 330,
+      "_modified_time": "2026-03-31T12:12:04.727242"
     },
     {
       "id": "com.yersmagit.lessonsdisplayer",
@@ -136,10 +179,15 @@
       "branch": "master",
       "readme": "README.md",
       "icon": "icon.png",
-      "tags": ["tools", "classroom_environment", "information", "subject"],
+      "tags": [
+        "tools",
+        "classroom_environment",
+        "information",
+        "subject"
+      ],
       "_file_path": "com.yersmagit.lessonsdisplayer.json",
-      "_file_size": 517,
-      "_modified_time": "2026-03-31T11:39:00.676199"
+      "_file_size": 458,
+      "_modified_time": "2026-03-31T12:12:04.727242"
     }
   ],
   "errors": []
