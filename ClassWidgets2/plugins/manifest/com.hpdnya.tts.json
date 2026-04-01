@@ -1,7 +1,7 @@
 {
   "id": "com.hpdnya.tts",
   "name": "TTS 服务",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "api_version": ">=0.3.2",
   "description": "为通知提供 TTS 服务",
   "author": "IsHPDuwu",
