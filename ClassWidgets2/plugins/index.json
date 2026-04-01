@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-04-01T06:20:10.104830",
+    "generated_at": "2026-04-01T08:07:18.466460",
     "manifest_directory": "/home/runner/work/plugin-plaza/plugin-plaza/ClassWidgets2/plugins/manifest",
     "total_files_scanned": 8,
     "generator_version": "1.0.0"
@@ -44,7 +44,7 @@
       "tags": ["tts"],
       "_file_path": "com.hpdnya.tts.json",
       "_file_size": 357,
-      "_modified_time": "2026-04-01T06:20:10.023954"
+      "_modified_time": "2026-04-01T08:07:18.390274"
     },
     {
       "id": "com.hpdnya.uiaccess",
@@ -60,7 +60,7 @@
       "tags": ["uiaccess"],
       "_file_path": "com.hpdnya.uiaccess.json",
       "_file_size": 479,
-      "_modified_time": "2026-04-01T06:20:07.627326"
+      "_modified_time": "2026-04-01T08:07:16.255498"
     },
     {
       "id": "com.hpdnya.weather",
@@ -76,7 +76,7 @@
       "tags": ["weather"],
       "_file_path": "com.hpdnya.weather.json",
       "_file_size": 455,
-      "_modified_time": "2026-04-01T06:20:00.414906"
+      "_modified_time": "2026-04-01T08:07:12.037443"
     },
     {
       "id": "com.laoshui.voicehub",
@@ -92,7 +92,7 @@
       "tags": ["classroom_environment", "tools", "Information"],
       "_file_path": "com.laoshui.voicehub.json",
       "_file_size": 482,
-      "_modified_time": "2026-04-01T06:20:09.110231"
+      "_modified_time": "2026-04-01T08:07:17.540261"
     },
     {
       "id": "com.laoshui.yiyan",
@@ -108,7 +108,7 @@
       "tags": ["classroom_environment", "tools"],
       "_file_path": "com.laoshui.yiyan.json",
       "_file_size": 417,
-      "_modified_time": "2026-04-01T06:20:08.743407"
+      "_modified_time": "2026-04-01T08:07:17.258997"
     },
     {
       "id": "com.rinlit.countdowndays",
@@ -124,7 +124,7 @@
       "tags": ["tools", "utility", "widget", "reminder"],
       "_file_path": "com.rinlit.countdowndays.json",
       "_file_size": 491,
-      "_modified_time": "2026-04-01T06:20:08.465637"
+      "_modified_time": "2026-04-01T08:07:16.906793"
     },
     {
       "id": "com.rinlit.test",
@@ -140,7 +140,7 @@
       "tags": ["example", "tools"],
       "_file_path": "com.rinlit.test.json",
       "_file_size": 373,
-      "_modified_time": "2026-04-01T06:20:08.079237"
+      "_modified_time": "2026-04-01T08:07:16.607866"
     },
     {
       "id": "com.yersmagit.lessonsdisplayer",
@@ -156,7 +156,7 @@
       "tags": ["tools", "classroom_environment", "information", "subject"],
       "_file_path": "com.yersmagit.lessonsdisplayer.json",
       "_file_size": 517,
-      "_modified_time": "2026-04-01T06:20:09.397236"
+      "_modified_time": "2026-04-01T08:07:17.846408"
     }
   ],
   "errors": []
