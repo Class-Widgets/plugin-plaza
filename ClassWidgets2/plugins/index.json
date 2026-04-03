@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-04-03T13:54:27.240514",
+    "generated_at": "2026-04-03T14:35:30.096400",
     "manifest_directory": "/home/runner/work/plugin-plaza/plugin-plaza/ClassWidgets2/plugins/manifest",
     "total_files_scanned": 8,
     "generator_version": "1.0.0"
@@ -45,7 +45,7 @@
       "tags": ["tts"],
       "_file_path": "com.hpdnya.tts.json",
       "_file_size": 357,
-      "_modified_time": "2026-04-03T13:54:27.164711"
+      "_modified_time": "2026-04-03T14:35:30.019097"
     },
     {
       "id": "com.hpdnya.uiaccess",
@@ -61,7 +61,23 @@
       "tags": ["uiaccess"],
       "_file_path": "com.hpdnya.uiaccess.json",
       "_file_size": 479,
-      "_modified_time": "2026-04-03T13:54:24.113216"
+      "_modified_time": "2026-04-03T14:35:26.763085"
+    },
+    {
+      "id": "com.hpdnya.weather",
+      "name": "天气",
+      "version": "1.0.0",
+      "api_version": ">=0.3.0",
+      "description": "Class Widgets 2 天气插件，支持多种天气 API（Open-Meteo / 和风天气 / 小米天气），提供实时天气显示、天气预警通知等功能。",
+      "author": "IsHPDuwu",
+      "url": "https://github.com/IsHPDuwu/cw2p-com.hpdnya.weather",
+      "branch": "main",
+      "readme": "README.md",
+      "icon": null,
+      "tags": ["weather"],
+      "_file_path": "com.hpdnya.weather.json",
+      "_file_size": 455,
+      "_modified_time": "2026-04-03T14:35:20.986770"
     },
     {
       "id": "com.laoshui.voicehub",
@@ -77,7 +93,7 @@
       "tags": ["classroom_environment", "tools", "Information"],
       "_file_path": "com.laoshui.voicehub.json",
       "_file_size": 482,
-      "_modified_time": "2026-04-03T13:54:25.959429"
+      "_modified_time": "2026-04-03T14:35:28.616252"
     },
     {
       "id": "com.laoshui.yiyan",
@@ -93,7 +109,7 @@
       "tags": ["classroom_environment", "tools"],
       "_file_path": "com.laoshui.yiyan.json",
       "_file_size": 417,
-      "_modified_time": "2026-04-03T13:54:25.520584"
+      "_modified_time": "2026-04-03T14:35:28.073024"
     },
     {
       "id": "com.rinlit.countdowndays",
@@ -109,7 +125,7 @@
       "tags": ["tools", "utility", "widget", "reminder"],
       "_file_path": "com.rinlit.countdowndays.json",
       "_file_size": 491,
-      "_modified_time": "2026-04-03T13:54:25.080219"
+      "_modified_time": "2026-04-03T14:35:27.641315"
     },
     {
       "id": "com.rinlit.test",
@@ -125,7 +141,7 @@
       "tags": ["example", "tools"],
       "_file_path": "com.rinlit.test.json",
       "_file_size": 373,
-      "_modified_time": "2026-04-03T13:54:24.524913"
+      "_modified_time": "2026-04-03T14:35:27.191945"
     },
     {
       "id": "com.yersmagit.lessonsdisplayer",
@@ -141,7 +157,7 @@
       "tags": ["tools", "classroom_environment", "information", "subject"],
       "_file_path": "com.yersmagit.lessonsdisplayer.json",
       "_file_size": 517,
-      "_modified_time": "2026-04-03T13:54:26.383687"
+      "_modified_time": "2026-04-03T14:35:29.051270"
     }
   ],
   "errors": []
