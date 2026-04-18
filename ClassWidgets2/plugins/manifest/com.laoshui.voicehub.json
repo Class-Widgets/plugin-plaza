@@ -1,13 +1,17 @@
 {
-  "id": "com.laoshui.voicehub",
-  "name": "VoiceHub 广播站排期",
-  "version": "1.0.2",
-  "api_version": ">=0.1.0",
-  "author": "LaoShui",
-  "description": "展示广播站当日排期歌曲，按播放顺序显示歌曲信息",
-  "url": "https://github.com/laoshuikaixue/cw2-voicehub-plugin",
-  "branch": "master",
-  "readme": "README.md",
-  "icon": "icon.png",
-  "tags": ["classroom_environment", "tools", "Information"]
+    "id": "com.laoshui.voicehub",
+    "name": "VoiceHub 广播站排期",
+    "version": "1.0.2",
+    "api_version": ">=0.1.0",
+    "author": "LaoShui",
+    "description": "展示广播站当日排期歌曲，按播放顺序显示歌曲信息",
+    "url": "https://github.com/laoshuikaixue/cw2-voicehub-plugin",
+    "branch": "master",
+    "readme": "README.md",
+    "icon": "icon.png",
+    "tags": [
+        "classroom_environment",
+        "tools",
+        "Information"
+    ]
 }
