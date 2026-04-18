@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-04-18T16:25:15.511309",
+    "generated_at": "2026-04-18T17:27:03.043318",
     "manifest_directory": "/home/runner/work/plugin-plaza/plugin-plaza/ClassWidgets2/plugins/manifest",
     "total_files_scanned": 7,
     "generator_version": "1.0.0"
@@ -8,12 +8,7 @@
   "statistics": {
     "total_plugins": 7,
     "total_errors": 0,
-    "unique_authors": [
-      "IsHPDuwu",
-      "LaoShui",
-      "RinLit",
-      "Yersmagit"
-    ],
+    "unique_authors": ["IsHPDuwu", "LaoShui", "RinLit", "Yersmagit"],
     "version_distribution": {
       "0.2.4": 1,
       "1.0.0": 4,
@@ -46,12 +41,10 @@
       "branch": "main",
       "readme": "README.md",
       "icon": "icon.png",
-      "tags": [
-        "tts"
-      ],
+      "tags": ["tts"],
       "_file_path": "com.hpdnya.tts.json",
       "_file_size": 357,
-      "_modified_time": "2026-04-18T16:25:13.004743"
+      "_modified_time": "2026-04-18T17:27:01.513994"
     },
     {
       "id": "com.hpdnya.uiaccess",
@@ -64,12 +57,10 @@
       "branch": "main",
       "readme": "README.md",
       "icon": null,
-      "tags": [
-        "uiaccess"
-      ],
+      "tags": ["uiaccess"],
       "_file_path": "com.hpdnya.uiaccess.json",
       "_file_size": 479,
-      "_modified_time": "2026-04-18T16:25:13.493090"
+      "_modified_time": "2026-04-18T17:27:01.755882"
     },
     {
       "id": "com.laoshui.voicehub",
@@ -82,14 +73,10 @@
       "branch": "master",
       "readme": "README.md",
       "icon": "icon.png",
-      "tags": [
-        "classroom_environment",
-        "tools",
-        "Information"
-      ],
+      "tags": ["classroom_environment", "tools", "Information"],
       "_file_path": "com.laoshui.voicehub.json",
       "_file_size": 482,
-      "_modified_time": "2026-04-18T16:25:14.478734"
+      "_modified_time": "2026-04-18T17:27:02.387220"
     },
     {
       "id": "com.laoshui.yiyan",
@@ -102,13 +89,10 @@
       "branch": "master",
       "readme": "README.md",
       "icon": "icon.png",
-      "tags": [
-        "classroom_environment",
-        "tools"
-      ],
+      "tags": ["classroom_environment", "tools"],
       "_file_path": "com.laoshui.yiyan.json",
       "_file_size": 417,
-      "_modified_time": "2026-04-18T16:25:14.010087"
+      "_modified_time": "2026-04-18T17:27:02.018208"
     },
     {
       "id": "com.rinlit.countdowndays",
@@ -121,15 +105,10 @@
       "branch": "master",
       "readme": "README.md",
       "icon": "icon.png",
-      "tags": [
-        "tools",
-        "utility",
-        "widget",
-        "reminder"
-      ],
+      "tags": ["tools", "utility", "widget", "reminder"],
       "_file_path": "com.rinlit.countdowndays.json",
       "_file_size": 491,
-      "_modified_time": "2026-04-18T16:25:15.440283"
+      "_modified_time": "2026-04-18T17:27:02.964934"
     },
     {
       "id": "com.rinlit.test",
@@ -142,13 +121,10 @@
       "branch": "master",
       "readme": "README.md",
       "icon": "icon.png",
-      "tags": [
-        "example",
-        "tools"
-      ],
+      "tags": ["example", "tools"],
       "_file_path": "com.rinlit.test.json",
       "_file_size": 373,
-      "_modified_time": "2026-04-18T16:25:14.982300"
+      "_modified_time": "2026-04-18T17:27:02.696855"
     },
     {
       "id": "com.yersmagit.lessonsdisplayer",
@@ -161,15 +137,10 @@
       "branch": "master",
       "readme": "README.md",
       "icon": "icon.png",
-      "tags": [
-        "tools",
-        "classroom_environment",
-        "information",
-        "subject"
-      ],
+      "tags": ["tools", "classroom_environment", "information", "subject"],
       "_file_path": "com.yersmagit.lessonsdisplayer.json",
       "_file_size": 517,
-      "_modified_time": "2026-04-18T16:25:12.537449"
+      "_modified_time": "2026-04-18T17:27:01.260933"
     }
   ],
   "errors": []
