@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-05-10T09:19:22.230669",
+    "generated_at": "2026-05-10T10:23:57.103394",
     "manifest_directory": "/home/runner/work/plugin-plaza/plugin-plaza/ClassWidgets2/plugins/manifest",
     "total_files_scanned": 7,
     "generator_version": "1.0.0"
@@ -11,8 +11,8 @@
     "unique_authors": ["IsHPDuwu", "LaoShui", "RinLit", "Yersmagit"],
     "version_distribution": {
       "0.2.4": 1,
-      "1.0.0": 4,
-      "1.0.1": 1,
+      "1.0.0": 3,
+      "1.0.1": 2,
       "1.0.2": 1
     },
     "tag_distribution": {
@@ -44,7 +44,7 @@
       "tags": ["tts"],
       "_file_path": "com.hpdnya.tts.json",
       "_file_size": 357,
-      "_modified_time": "2026-05-10T09:19:21.095145"
+      "_modified_time": "2026-05-10T10:23:55.990873"
     },
     {
       "id": "com.hpdnya.uiaccess",
@@ -60,7 +60,7 @@
       "tags": ["uiaccess"],
       "_file_path": "com.hpdnya.uiaccess.json",
       "_file_size": 479,
-      "_modified_time": "2026-05-10T09:19:21.289487"
+      "_modified_time": "2026-05-10T10:23:56.199182"
     },
     {
       "id": "com.laoshui.voicehub",
@@ -76,7 +76,7 @@
       "tags": ["classroom_environment", "tools", "Information"],
       "_file_path": "com.laoshui.voicehub.json",
       "_file_size": 482,
-      "_modified_time": "2026-05-10T09:19:21.730300"
+      "_modified_time": "2026-05-10T10:23:56.619896"
     },
     {
       "id": "com.laoshui.yiyan",
@@ -92,13 +92,13 @@
       "tags": ["classroom_environment", "tools"],
       "_file_path": "com.laoshui.yiyan.json",
       "_file_size": 417,
-      "_modified_time": "2026-05-10T09:19:21.512788"
+      "_modified_time": "2026-05-10T10:23:56.412008"
     },
     {
       "id": "com.rinlit.countdowndays",
       "name": "倒数日 Countdown Days",
-      "version": "1.0.0",
-      "api_version": ">=0.3.0",
+      "version": "1.0.1",
+      "api_version": "~=0.4.1",
       "description": "西大不丢 2 (Class Widgets 2) 倒计日插件/ Countdown Days Plugin",
       "author": "RinLit",
       "url": "https://github.com/RinLit-233-shiroko/cw-countdown-days",
@@ -108,7 +108,7 @@
       "tags": ["tools", "utility", "widget", "reminder"],
       "_file_path": "com.rinlit.countdowndays.json",
       "_file_size": 491,
-      "_modified_time": "2026-05-10T09:19:22.147378"
+      "_modified_time": "2026-05-10T10:23:57.021707"
     },
     {
       "id": "com.rinlit.test",
@@ -124,7 +124,7 @@
       "tags": ["example", "tools"],
       "_file_path": "com.rinlit.test.json",
       "_file_size": 373,
-      "_modified_time": "2026-05-10T09:19:21.939577"
+      "_modified_time": "2026-05-10T10:23:56.838140"
     },
     {
       "id": "com.yersmagit.lessonsdisplayer",
@@ -140,7 +140,7 @@
       "tags": ["tools", "classroom_environment", "information", "subject"],
       "_file_path": "com.yersmagit.lessonsdisplayer.json",
       "_file_size": 517,
-      "_modified_time": "2026-05-10T09:19:20.909217"
+      "_modified_time": "2026-05-10T10:23:55.750118"
     }
   ],
   "errors": []
