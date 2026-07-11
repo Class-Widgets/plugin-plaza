@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-07-11T07:03:25.996818",
+    "generated_at": "2026-07-11T09:13:24.430413",
     "manifest_directory": "/home/runner/work/plugin-plaza/plugin-plaza/ClassWidgets2/plugins/manifest",
     "total_files_scanned": 7,
     "generator_version": "1.0.0"
@@ -44,7 +44,7 @@
       "tags": ["tts"],
       "_file_path": "com.hpdnya.tts.json",
       "_file_size": 357,
-      "_modified_time": "2026-07-11T07:03:25.152984"
+      "_modified_time": "2026-07-11T09:13:23.093203"
     },
     {
       "id": "com.hpdnya.uiaccess",
@@ -60,7 +60,7 @@
       "tags": ["uiaccess"],
       "_file_path": "com.hpdnya.uiaccess.json",
       "_file_size": 479,
-      "_modified_time": "2026-07-11T07:03:25.397315"
+      "_modified_time": "2026-07-11T09:13:23.499417"
     },
     {
       "id": "com.laoshui.voicehub",
@@ -76,7 +76,7 @@
       "tags": ["classroom_environment", "tools", "Information"],
       "_file_path": "com.laoshui.voicehub.json",
       "_file_size": 482,
-      "_modified_time": "2026-07-11T07:03:24.600567"
+      "_modified_time": "2026-07-11T09:13:22.343800"
     },
     {
       "id": "com.laoshui.yiyan",
@@ -92,7 +92,7 @@
       "tags": ["classroom_environment", "tools"],
       "_file_path": "com.laoshui.yiyan.json",
       "_file_size": 417,
-      "_modified_time": "2026-07-11T07:03:24.309479"
+      "_modified_time": "2026-07-11T09:13:21.945302"
     },
     {
       "id": "com.rinlit.countdowndays",
@@ -108,7 +108,7 @@
       "tags": ["tools", "utility", "widget", "reminder"],
       "_file_path": "com.rinlit.countdowndays.json",
       "_file_size": 491,
-      "_modified_time": "2026-07-11T07:03:24.877463"
+      "_modified_time": "2026-07-11T09:13:22.705311"
     },
     {
       "id": "com.rinlit.test",
@@ -124,7 +124,7 @@
       "tags": ["example", "tools"],
       "_file_path": "com.rinlit.test.json",
       "_file_size": 373,
-      "_modified_time": "2026-07-11T07:03:25.664668"
+      "_modified_time": "2026-07-11T09:13:23.964399"
     },
     {
       "id": "com.yersmagit.lessonsdisplayer",
@@ -140,7 +140,7 @@
       "tags": ["tools", "classroom_environment", "information", "subject"],
       "_file_path": "com.yersmagit.lessonsdisplayer.json",
       "_file_size": 517,
-      "_modified_time": "2026-07-11T07:03:25.920720"
+      "_modified_time": "2026-07-11T09:13:24.364784"
     }
   ],
   "errors": []
