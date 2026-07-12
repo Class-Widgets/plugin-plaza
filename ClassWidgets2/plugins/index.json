@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-07-12T09:40:10.791676",
+    "generated_at": "2026-07-12T11:02:05.357783",
     "manifest_directory": "/home/runner/work/plugin-plaza/plugin-plaza/ClassWidgets2/plugins/manifest",
     "total_files_scanned": 7,
     "generator_version": "1.0.0"
@@ -11,9 +11,10 @@
     "unique_authors": ["IsHPDuwu", "LaoShui", "RinLit", "Yersmagit"],
     "version_distribution": {
       "0.2.4": 1,
-      "1.0.0": 3,
-      "1.0.1": 2,
-      "1.0.2": 1
+      "0.4.2": 1,
+      "1.0.0": 2,
+      "1.0.1": 1,
+      "1.0.2": 2
     },
     "tag_distribution": {
       "tools": 5,
@@ -44,7 +45,7 @@
       "tags": ["tts"],
       "_file_path": "com.hpdnya.tts.json",
       "_file_size": 357,
-      "_modified_time": "2026-07-12T09:40:09.693480"
+      "_modified_time": "2026-07-12T11:02:03.581825"
     },
     {
       "id": "com.hpdnya.uiaccess",
@@ -60,7 +61,7 @@
       "tags": ["uiaccess"],
       "_file_path": "com.hpdnya.uiaccess.json",
       "_file_size": 479,
-      "_modified_time": "2026-07-12T09:40:09.943408"
+      "_modified_time": "2026-07-12T11:02:04.131968"
     },
     {
       "id": "com.laoshui.voicehub",
@@ -76,7 +77,7 @@
       "tags": ["classroom_environment", "tools", "Information"],
       "_file_path": "com.laoshui.voicehub.json",
       "_file_size": 482,
-      "_modified_time": "2026-07-12T09:40:09.154200"
+      "_modified_time": "2026-07-12T11:02:02.436065"
     },
     {
       "id": "com.laoshui.yiyan",
@@ -92,14 +93,14 @@
       "tags": ["classroom_environment", "tools"],
       "_file_path": "com.laoshui.yiyan.json",
       "_file_size": 417,
-      "_modified_time": "2026-07-12T09:40:08.857389"
+      "_modified_time": "2026-07-12T11:02:01.817219"
     },
     {
       "id": "com.rinlit.countdowndays",
       "name": "倒数日 Countdown Days",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "api_version": "~=0.4.1",
-      "description": "西大不丢 2 (Class Widgets 2) 倒计日插件/ Countdown Days Plugin",
+      "description": "西大不丢 2 (Class Widgets 2) 倒计日插件",
       "author": "RinLit",
       "url": "https://github.com/RinLit-233-shiroko/cw-countdown-days",
       "branch": "master",
@@ -107,15 +108,15 @@
       "icon": "icon.png",
       "tags": ["tools", "utility", "widget", "reminder"],
       "_file_path": "com.rinlit.countdowndays.json",
-      "_file_size": 491,
-      "_modified_time": "2026-07-12T09:40:09.413180"
+      "_file_size": 468,
+      "_modified_time": "2026-07-12T11:02:03.078785"
     },
     {
       "id": "com.rinlit.test",
-      "name": "Test",
-      "version": "1.0.0",
-      "api_version": "~=0.3.0",
-      "description": "A Class Widgets plugin.",
+      "name": "插件开发模板",
+      "version": "0.4.2",
+      "api_version": "~=0.4.2",
+      "description": "支持 Class Widgets 2 插件的开发模板",
       "author": "RinLit",
       "url": "https://github.com/Class-Widgets/plugin-template-v2/",
       "branch": "master",
@@ -123,8 +124,8 @@
       "icon": "icon.png",
       "tags": ["example", "tools"],
       "_file_path": "com.rinlit.test.json",
-      "_file_size": 373,
-      "_modified_time": "2026-07-12T09:40:10.351171"
+      "_file_size": 408,
+      "_modified_time": "2026-07-12T11:02:04.639442"
     },
     {
       "id": "com.yersmagit.lessonsdisplayer",
@@ -140,7 +141,7 @@
       "tags": ["tools", "classroom_environment", "information", "subject"],
       "_file_path": "com.yersmagit.lessonsdisplayer.json",
       "_file_size": 517,
-      "_modified_time": "2026-07-12T09:40:10.719276"
+      "_modified_time": "2026-07-12T11:02:05.287141"
     }
   ],
   "errors": []

@@ -1,9 +1,9 @@
 {
   "id": "com.rinlit.countdowndays",
   "name": "倒数日 Countdown Days",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "api_version": "~=0.4.1",
-  "description": "西大不丢 2 (Class Widgets 2) 倒计日插件/ Countdown Days Plugin",
+  "description": "西大不丢 2 (Class Widgets 2) 倒计日插件",
   "author": "RinLit",
   "url": "https://github.com/RinLit-233-shiroko/cw-countdown-days",
   "branch": "master",

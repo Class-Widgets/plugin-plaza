@@ -1,9 +1,9 @@
 {
   "id": "com.rinlit.test",
-  "name": "Test",
-  "version": "1.0.0",
-  "api_version": "~=0.3.0",
-  "description": "A Class Widgets plugin.",
+  "name": "插件开发模板",
+  "version": "0.4.2",
+  "api_version": "~=0.4.2",
+  "description": "支持 Class Widgets 2 插件的开发模板",
   "author": "RinLit",
   "url": "https://github.com/Class-Widgets/plugin-template-v2/",
   "branch": "master",
