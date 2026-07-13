@@ -2,6 +2,33 @@
 
 插件的索引仓库
 
+
+
+> [!WARNING]
+> <div align="center">
+> 
+> ### 关于本索引仓库状态变更的通知
+> 
+> </div>
+> 
+> 　　因为当前的 [插件广场](https://plaza.cw.rinlit.cn) 接入了全新的系统，新系统提供了更加优秀的分发、管理体验。因此，本索引仓库将不再受理任何 Issue、PR请求，也将一同停止维护。我们都将转向使用全新的管理系统。
+> 
+> 　　若您想在插件广场分发插件，可前往 [插件广场控制台](https://plaza.cw.rinlit.cn/console) 进一步操作；若您希望反馈关于 Class Widgets 的相关意见、或参与我们的建设，请到 [本项目仓库](https://github.com/RinLit-233-shiroko/Class-Widgets-2/) 中发出 Issue、PR。
+> 
+> 　　特此通告。
+> 
+> <div align="right">
+> 
+> Class Widgets
+> 
+> 2026 年 7 月 14 日
+> 
+> </div>
+
+
+
+<del>
+
 ## 如何使用
 
 > [!TIP]
@@ -80,3 +107,6 @@
 如有疑问，请[创建 Issue](../../issues/new)或查看[官方文档](https://cw.rinlit.cn/docs-dev)
 
 </div>
+
+
+</del>
