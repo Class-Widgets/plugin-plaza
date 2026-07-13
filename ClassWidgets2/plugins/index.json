@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-07-13T13:56:39.454366",
+    "generated_at": "2026-07-13T18:24:49.004898",
     "manifest_directory": "/home/runner/work/plugin-plaza/plugin-plaza/ClassWidgets2/plugins/manifest",
     "total_files_scanned": 7,
     "generator_version": "1.0.0"
@@ -12,9 +12,9 @@
     "version_distribution": {
       "0.2.4": 1,
       "0.4.2": 1,
-      "1.0.0": 2,
+      "1.0.0": 1,
       "1.0.1": 1,
-      "1.0.2": 2
+      "1.0.2": 3
     },
     "tag_distribution": {
       "tools": 5,
@@ -34,7 +34,7 @@
     {
       "id": "com.hpdnya.tts",
       "name": "TTS 服务",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "api_version": ">=0.3.2",
       "description": "为通知提供 TTS 服务",
       "author": "IsHPDuwu",
@@ -45,12 +45,12 @@
       "tags": ["tts"],
       "_file_path": "com.hpdnya.tts.json",
       "_file_size": 357,
-      "_modified_time": "2026-07-13T13:56:38.483513"
+      "_modified_time": "2026-07-13T18:24:47.527920"
     },
     {
       "id": "com.hpdnya.uiaccess",
       "name": "UIAccess",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "api_version": ">=0.3.0",
       "description": "为 Class Widgets 2 提升 UIAccess 令牌，使窗口可以置顶到全屏 UWP 应用和系统界面上方。需要以管理员身份运行。",
       "author": "IsHPDuwu",
@@ -61,7 +61,7 @@
       "tags": ["uiaccess"],
       "_file_path": "com.hpdnya.uiaccess.json",
       "_file_size": 479,
-      "_modified_time": "2026-07-13T13:56:38.806988"
+      "_modified_time": "2026-07-13T18:24:47.918400"
     },
     {
       "id": "com.laoshui.voicehub",
@@ -77,7 +77,7 @@
       "tags": ["classroom_environment", "tools", "Information"],
       "_file_path": "com.laoshui.voicehub.json",
       "_file_size": 482,
-      "_modified_time": "2026-07-13T13:56:37.893253"
+      "_modified_time": "2026-07-13T18:24:46.676514"
     },
     {
       "id": "com.laoshui.yiyan",
@@ -93,7 +93,7 @@
       "tags": ["classroom_environment", "tools"],
       "_file_path": "com.laoshui.yiyan.json",
       "_file_size": 417,
-      "_modified_time": "2026-07-13T13:56:37.513887"
+      "_modified_time": "2026-07-13T18:24:46.213332"
     },
     {
       "id": "com.rinlit.countdowndays",
@@ -109,7 +109,7 @@
       "tags": ["tools", "utility", "widget", "reminder"],
       "_file_path": "com.rinlit.countdowndays.json",
       "_file_size": 468,
-      "_modified_time": "2026-07-13T13:56:38.181218"
+      "_modified_time": "2026-07-13T18:24:47.020853"
     },
     {
       "id": "com.rinlit.test",
@@ -125,7 +125,7 @@
       "tags": ["example", "tools"],
       "_file_path": "com.rinlit.test.json",
       "_file_size": 408,
-      "_modified_time": "2026-07-13T13:56:39.116986"
+      "_modified_time": "2026-07-13T18:24:48.384307"
     },
     {
       "id": "com.yersmagit.lessonsdisplayer",
@@ -141,7 +141,7 @@
       "tags": ["tools", "classroom_environment", "information", "subject"],
       "_file_path": "com.yersmagit.lessonsdisplayer.json",
       "_file_size": 517,
-      "_modified_time": "2026-07-13T13:56:39.377713"
+      "_modified_time": "2026-07-13T18:24:48.941007"
     }
   ],
   "errors": []
